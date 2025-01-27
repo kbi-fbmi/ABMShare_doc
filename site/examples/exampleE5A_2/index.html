@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>T5.2 Simulation - Intervention types - abmSHARE Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "T5.2 Simulation - Intervention types";
+        var mkdocs_page_input_path = "examples\\exampleE5A_2.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> abmSHARE Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              
+                      <p class="caption"><span class="caption-text">About</span></p>
+              
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../..">Welcome to abmSHARE documentation</a>
+                  </li>
+              </ul>
+              
+                      <p class="caption"><span class="caption-text">Tutorials</span></p>
+              
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE1/">T1 Getting Started with abmSHARE</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE2/">T2 Importing/Exporting data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE3/">T3 Ways for run</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE4/">T4 Creating population</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE4_1/">T4.1 Population input data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE5/">T5 Creating simulation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE5A_1/">T5.1 Simulation - Interventions</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">T5.2 Simulation - Intervention types</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#mobility-intervention">Mobility intervention</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#change-in-beta-overall-transmission-intervention">Change in beta (overall transmission) intervention</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#contact-isolation-intervention">Contact isolation intervention</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#daily-testing-intervention">Daily testing intervention</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#testing-probability-intervention">Testing probability intervention</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#contact-tracing-intervention">Contact tracing intervention</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#simple-vaccination">Simple vaccination</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#intervention-stacking">Intervention stacking</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#requirements">Requirements</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE5B/">T5.3 Simulation - Immunity and variants</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE6/">T6 Reporting outputs</a>
+                  </li>
+              </ul>
+              
+                      <p class="caption"><span class="caption-text">Module Configurations Description</span></p>
+              
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Extension_settings/">Main configuration file</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Synthetic_pop_settings/">Synthetic population configuration file</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Simulation_settings/">Simulation configuration file</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Report_settings/">Report module configuration file</a>
+                  </li>
+              </ul>
+              
+                  <ul><li>
+                      <a href="../../Downloads/" style="padding: 0; font-size: inherit; line-height: inherit">
+              
+                      <p class="caption"><span class="caption-text">Downloads</span></p>
+              
+                      </a>
+                  </li></ul>
+              
+              <ul>
+              </ul>
+              
+                  <ul><li>
+                      <a href="../../Parameters/" style="padding: 0; font-size: inherit; line-height: inherit">
+              
+                      <p class="caption"><span class="caption-text">Parameters</span></p>
+              
+                      </a>
+                  </li></ul>
+              
+              <ul>
+              </ul>
+              
+                  <ul><li>
+                      <a href="../../ChangeLog/" style="padding: 0; font-size: inherit; line-height: inherit">
+              
+                      <p class="caption"><span class="caption-text">Change Log</span></p>
+              
+                      </a>
+                  </li></ul>
+              
+              <ul>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">abmSHARE Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Tutorials &raquo;</li>
+      <li>T5.2 Simulation - Intervention types</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="intervention-types">Intervention types<a class="headerlink" href="#intervention-types" title="Permanent link">#</a></h1>
+<p>This section describes the intervention types and their parameters.</p>
+<p><strong>Interventions are defined in the proper <a href="../../downloads/simulation_data/simulation_interventions.csv">simulation intervention file</a></strong></p>
+<h2 id="mobility-intervention">Mobility intervention<a class="headerlink" href="#mobility-intervention" title="Permanent link">#</a></h2>
+<p>Mobility intervention can be used to simulate region lockdowns. 
+When some region is locked down, agents cannot travel in and out of the region. 
+This intervention can take effect only if <strong>mobility feature</strong> is enabled and defined with proper mobility input data (for details see <a href="../exampleE5/#core-features">here</a>).</p>
+<p>Example of valid keys for <a href="../../Parameters/#parameters-for-mobility-intervention">parameters</a></p>
+<table>
+<thead>
+<tr>
+<th>location_code</th>
+<th>use</th>
+<th>label</th>
+<th>intervention_type</th>
+<th>start_day</th>
+<th>num_days</th>
+<th>end_day</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CZ01</td>
+<td>true</td>
+<td>mob_change</td>
+<td>mobility_change</td>
+<td>2020-03-01</td>
+<td></td>
+<td>2020-05-19</td>
+</tr>
+<tr>
+<td>CZ02</td>
+<td>false</td>
+<td>mob_change</td>
+<td>mobility_change</td>
+<td></td>
+<td>"[10,25]"</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="change-in-beta-overall-transmission-intervention">Change in beta (overall transmission) intervention<a class="headerlink" href="#change-in-beta-overall-transmission-intervention" title="Permanent link">#</a></h2>
+<p>This intervention can be used to specify transmission by a certain amount for given day/days. Can be used for school closures/restrictions, home office, wearing masks etc. These changes affect the overall transmission parameter in the selected layers.</p>
+<p>Example of valid keys for <a href="../../Parameters/#parameters-for-changing-beta-intervention">parameters</a></p>
+<table>
+<thead>
+<tr>
+<th>location_code</th>
+<th>use</th>
+<th>label</th>
+<th>intervention_type</th>
+<th>start_day</th>
+<th>num_days</th>
+<th>end_day</th>
+<th>beta_change</th>
+<th>layers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>global</td>
+<td>false</td>
+<td>mah</td>
+<td>beta_change</td>
+<td>2020-01-01</td>
+<td></td>
+<td>2020-03-19</td>
+<td>[0.5]</td>
+<td>[w,s]</td>
+</tr>
+<tr>
+<td>global</td>
+<td>true</td>
+<td>meh</td>
+<td>beta_change</td>
+<td>2020-01-10</td>
+<td>15</td>
+<td></td>
+<td>[0.5,0.7]</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="contact-isolation-intervention">Contact isolation intervention<a class="headerlink" href="#contact-isolation-intervention" title="Permanent link">#</a></h2>
+<p>Isolate contacts from simulation by, for example, removing contacts for school or for every contact layer. 
+When intervention ends contacts will be restored. Can affect putting people to quarantine, if there is testing and tracking, because of contact removal. Can be used for example for school closures, home offices etc. 
+Compared to the change in beta, contact isolation intervention removes contacts while preserving the transmission value.</p>
+<p>Example of valid keys for <a href="../../Parameters/#parameters-for-contact-isolation">parameters</a></p>
+<table>
+<thead>
+<tr>
+<th>location_code</th>
+<th>use</th>
+<th>label</th>
+<th>intervention_type</th>
+<th>start_day</th>
+<th>num_days</th>
+<th>end_day</th>
+<th>beta_change</th>
+<th>layers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CZ01</td>
+<td>true</td>
+<td>contact isolation interv</td>
+<td>isolate_contacts</td>
+<td>25</td>
+<td></td>
+<td>83</td>
+<td>[0.7,1]</td>
+<td>[s,w]</td>
+</tr>
+<tr>
+<td>Global</td>
+<td>true</td>
+<td>contact isolation interv global</td>
+<td>isolate_contacts</td>
+<td>25</td>
+<td></td>
+<td></td>
+<td>0.7</td>
+<td>[s,w]</td>
+</tr>
+</tbody>
+</table>
+<h2 id="daily-testing-intervention">Daily testing intervention<a class="headerlink" href="#daily-testing-intervention" title="Permanent link">#</a></h2>
+<p>Intervention for daily testing specifies the number of agents tested per day. 
+Its value can be also dependent on other values such as the probability of testing people who are quarantined etc. More info can be found in parameters.</p>
+<p>Example of valid keys for <a href="../../Parameters/#parameters-for-daily-testing">parameters</a></p>
+<table>
+<thead>
+<tr>
+<th>location_code</th>
+<th>use</th>
+<th>label</th>
+<th>intervention_type</th>
+<th>start_day</th>
+<th>num_days</th>
+<th>end_day</th>
+<th>daily_tests</th>
+<th>symp_test</th>
+<th>sensitivity</th>
+<th>test_delay</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CZ01</td>
+<td>false</td>
+<td>Per day testing intervention CZ01</td>
+<td>per_day_testing</td>
+<td>10</td>
+<td></td>
+<td>2020-01-30</td>
+<td></td>
+<td>1.5</td>
+<td>1.0</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Global</td>
+<td>false</td>
+<td>Per day testing intervention global</td>
+<td>per_day_testing</td>
+<td>2020-01-01</td>
+<td></td>
+<td>2020-01-30</td>
+<td>1000</td>
+<td>1.0</td>
+<td>1.0</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<h2 id="testing-probability-intervention">Testing probability intervention<a class="headerlink" href="#testing-probability-intervention" title="Permanent link">#</a></h2>
+<p>This intervention assigns to each person a probability of being tested based on the person's symptom state etc. 
+The total number of tests is not specified as in <a href="../exampleE5A_1/#daily-testing-intervention">Daily testing intervention</a>, but it influences the probability of being tested. Can be used as a substitute to the daily testing intervention.</p>
+<p>Example of valid keys for <a href="../../Parameters/#parameters-for-testing-probability">parameters</a></p>
+<table>
+<thead>
+<tr>
+<th>location_code</th>
+<th>use</th>
+<th>label</th>
+<th>intervention_type</th>
+<th>start_day</th>
+<th>num_days</th>
+<th>end_day</th>
+<th>symp_prob</th>
+<th>symp_quar_prob</th>
+<th>asymp_prob</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>global</td>
+<td>false</td>
+<td>Testing probability CZ01</td>
+<td>testing_probability</td>
+<td>20</td>
+<td></td>
+<td>2020-03-30</td>
+<td>0.1</td>
+<td>0.3</td>
+<td>0.01</td>
+</tr>
+<tr>
+<td>CZ01</td>
+<td>false</td>
+<td>Tetsing probability CZ01</td>
+<td>testing_probability</td>
+<td>2020-01-01</td>
+<td>30</td>
+<td></td>
+<td>0.1</td>
+<td>0.3</td>
+<td>0.01</td>
+</tr>
+</tbody>
+</table>
+<h2 id="contact-tracing-intervention">Contact tracing intervention<a class="headerlink" href="#contact-tracing-intervention" title="Permanent link">#</a></h2>
+<p>Contact tracing of agents who are already diagnosed positive by a testing intervention. Contacts are contacted and put in the quarantine (depends on simulation <em>key:quar_factor</em> parameter) for a certain period of time. If there is a probability of testing intervention, there can be significant increase of testing of contact-traced agents.</p>
+<p>Example of valid keys for <a href="../../Parameters/#parameters-for-contact-tracing">parameters</a>. Note that there must be testing intervention (such as <a href="../exampleE5A_1/#daily-testing-intervention">Daily testing</a> or <a href="../exampleE5A_1/#testing-probability-intervention">Probability testing</a>) before/on day D of starting the contact tracing intervention, otherwise this intervention will not work.</p>
+<table>
+<thead>
+<tr>
+<th>location_code</th>
+<th>use</th>
+<th>label</th>
+<th>intervention_type</th>
+<th>num_days</th>
+<th>capacity</th>
+<th>trace_probs</th>
+<th>quar_period</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cz01</td>
+<td>false</td>
+<td>contact tracing</td>
+<td>contact_tracing</td>
+<td></td>
+<td>0.5</td>
+<td>6</td>
+<td>6</td>
+</tr>
+<tr>
+<td>global</td>
+<td>false</td>
+<td>contact tracing</td>
+<td>contact_tracing</td>
+<td>[10,30]</td>
+<td>0.5</td>
+<td>6</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+<h2 id="simple-vaccination">Simple vaccination<a class="headerlink" href="#simple-vaccination" title="Permanent link">#</a></h2>
+<p>Can be used to apply a simple vaccine to a subset of the population. 
+This intervention can be added to changing the relative susceptibility and the probability of developing symptoms if still infected. 
+More info about vaccination can be found in <a href="../exampleE5B/">T5.3 Simulation - Immunity and variants</a>.</p>
+<p>Example of valid keys for <a href="../../Parameters/#parameters-for-simple-vaccination">parameters</a></p>
+<table>
+<thead>
+<tr>
+<th>location_code</th>
+<th>use</th>
+<th>label</th>
+<th>intervention_type</th>
+<th>prob</th>
+<th>rel_sus</th>
+<th>rel_symp</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>global</td>
+<td>true</td>
+<td>simple_vac_interv</td>
+<td>simple_vaccination</td>
+<td>0.9</td>
+<td>1.0</td>
+<td>1.0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="intervention-stacking">Intervention stacking<a class="headerlink" href="#intervention-stacking" title="Permanent link">#</a></h3>
+<p>You can define multiple interventions and it is not necessary to use all the keys. 
+In the intervention <code>csv</code>/<code>xlsx</code> file you can define multiple intervention with its corresponding keys and those while leaving empty those interventions that are not used. <strong>Do not define user custom keys which are not corresponding to the allowed keys for each intervention.</strong></p>
+<p>Example of intervention stacking:</p>
+<table>
+<thead>
+<tr>
+<th>location_code</th>
+<th>use</th>
+<th>label</th>
+<th>intervention_type</th>
+<th>start_day</th>
+<th>num_days</th>
+<th>end_day</th>
+<th>beta_change</th>
+<th>layers</th>
+<th>vaccine</th>
+<th>sequence</th>
+<th>num_doses</th>
+<th>symp_prob</th>
+<th>symp_quar_prob</th>
+<th>asymp_prob</th>
+<th>capacity</th>
+<th>trace_probs</th>
+<th>quar_period</th>
+<th>daily_tests</th>
+<th>symp_test</th>
+<th>sensitivity</th>
+<th>test_delay</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CZ01</td>
+<td>true</td>
+<td>TestLabel</td>
+<td>mobility_change</td>
+<td>2020-03-01</td>
+<td></td>
+<td>2020-05-19</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>global</td>
+<td>true</td>
+<td>TestLabel</td>
+<td>beta_change</td>
+<td>2020-01-10</td>
+<td>15</td>
+<td></td>
+<td>[0.5,0.7]</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>global</td>
+<td>false</td>
+<td>TestLabel</td>
+<td>testing_probability</td>
+<td>2020-01-01</td>
+<td></td>
+<td>2020-03-30</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.1</td>
+<td>0.3</td>
+<td>0.01</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>global</td>
+<td>false</td>
+<td>TestLabel</td>
+<td>contact_tracing</td>
+<td>10</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.5</td>
+<td>6</td>
+<td>6</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>CZ01</td>
+<td>false</td>
+<td>TestLabel</td>
+<td>per_day_testing</td>
+<td>10</td>
+<td></td>
+<td>2020-01-30</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>900</td>
+<td>1.0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>global</td>
+<td>false</td>
+<td>TestLabel</td>
+<td>testing_probability</td>
+<td>20</td>
+<td></td>
+<td>2020-03-30</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.1</td>
+<td>0.3</td>
+<td>0.01</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>global</td>
+<td>false</td>
+<td>TestLabel</td>
+<td>contact_tracing</td>
+<td></td>
+<td>[10,30]</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.5</td>
+<td>6</td>
+<td>6</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">#</a></h3>
+<p>Valid keys with values must be provided for each intervention, along with the necessary keys.</p>
+<ul>
+<li><a href="../exampleE5A_1/#how-to-define-intervention">Neccessary keys</a> </li>
+<li>Remaining of <a href="../../Parameters/#intervention-parameters">parameters keys</a></li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../exampleE5A_1/" class="btn btn-neutral float-left" title="T5.1 Simulation - Interventions"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../exampleE5B/" class="btn btn-neutral float-right" title="T5.3 Simulation - Immunity and variants">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../exampleE5A_1/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../exampleE5B/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../javascripts/mathjax.js" defer></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Simulation configuration file - abmSHARE Documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Simulation configuration file";
+        var mkdocs_page_input_path = "Simulation_settings.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> abmSHARE Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              
+                      <p class="caption"><span class="caption-text">About</span></p>
+              
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome to abmSHARE documentation</a>
+                  </li>
+              </ul>
+              
+                      <p class="caption"><span class="caption-text">Tutorials</span></p>
+              
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../examples/exampleE1/">T1 Getting Started with abmSHARE</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../examples/exampleE2/">T2 Importing/Exporting data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../examples/exampleE3/">T3 Ways for run</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../examples/exampleE4/">T4 Creating population</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../examples/exampleE4_1/">T4.1 Population input data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../examples/exampleE5/">T5 Creating simulation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../examples/exampleE5A_1/">T5.1 Simulation - Interventions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../examples/exampleE5A_2/">T5.2 Simulation - Intervention types</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../examples/exampleE5B/">T5.3 Simulation - Immunity and variants</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../examples/exampleE6/">T6 Reporting outputs</a>
+                  </li>
+              </ul>
+              
+                      <p class="caption"><span class="caption-text">Module Configurations Description</span></p>
+              
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../Extension_settings/">Main configuration file</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Synthetic_pop_settings/">Synthetic population configuration file</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Simulation configuration file</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#settings-for-running-a-simulation">Settings for running a simulation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#region-parameters">Region parameters</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#global-parameters">Global parameters</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#interventions">Interventions</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Report_settings/">Report module configuration file</a>
+                  </li>
+              </ul>
+              
+                  <ul><li>
+                      <a href="../Downloads/" style="padding: 0; font-size: inherit; line-height: inherit">
+              
+                      <p class="caption"><span class="caption-text">Downloads</span></p>
+              
+                      </a>
+                  </li></ul>
+              
+              <ul>
+              </ul>
+              
+                  <ul><li>
+                      <a href="../Parameters/" style="padding: 0; font-size: inherit; line-height: inherit">
+              
+                      <p class="caption"><span class="caption-text">Parameters</span></p>
+              
+                      </a>
+                  </li></ul>
+              
+              <ul>
+              </ul>
+              
+                  <ul><li>
+                      <a href="../ChangeLog/" style="padding: 0; font-size: inherit; line-height: inherit">
+              
+                      <p class="caption"><span class="caption-text">Change Log</span></p>
+              
+                      </a>
+                  </li></ul>
+              
+              <ul>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">abmSHARE Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Module Configurations Description &raquo;</li>
+      <li>Simulation configuration file</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="simulation-module-configuration">Simulation module configuration<a class="headerlink" href="#simulation-module-configuration" title="Permanent link">#</a></h1>
+<p>There is a list of possible parameters for file <code>simulation_configuration.json</code> responsible for creating simulation of defined regions. Example of the configuration file can be found below and is also for download <a href="../default_confs/simulation_configuration.json" download="simulation_configuration.json"> here</a>.</p>
+<h2 id="settings-for-running-a-simulation">Settings for running a simulation<a class="headerlink" href="#settings-for-running-a-simulation" title="Permanent link">#</a></h2>
+<ul>
+<li>parallel_run: <strong>(bool)</strong>  - to enable a parallel simulation that will use as many cores as many sims are defined. Used to load population and initialize simulation much faster.</li>
+<li>test: <strong>(bool)</strong> <strong>OPTIONAL</strong>- to enable running the simulation in test mode. It will override test settings both for population size and population type also with mobility.</li>
+</ul>
+<h2 id="region-parameters">Region parameters<a class="headerlink" href="#region-parameters" title="Permanent link">#</a></h2>
+<p>Input <code>csv</code> file responsible for selecting regions to be included in the simulation. There can be multiple regions defined, but it really depends on the <em>true</em> value of each row. </p>
+<p>Recommended keys are:
+- location_code
+- use
+- region_parent_name
+- pop_infected</p>
+<p><strong> Other allowed parameters are described <a href="../Parameters/#simulation-parameters">here</a></strong>
+Example file for download available <a href="./downloads/simulation_data/simulation_region_pars.csv" download="simulation_region_pars.csv"> here</a>.</p>
+<p>Example of <code>csv</code>/<code>xlsx</code> file structure:</p>
+<table>
+<thead>
+<tr>
+<th>location_code</th>
+<th>use</th>
+<th>region_parent_name</th>
+<th>name</th>
+<th>popfile</th>
+<th>pop_infected</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CZ01</td>
+<td>true</td>
+<td>Czechia</td>
+<td>Region1</td>
+<td>/absolute/path/to/popfile0.pop</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CZ02</td>
+<td>true</td>
+<td>Czechia</td>
+<td>Region2</td>
+<td>/absolute/path/to/popfile1.pop</td>
+<td>0</td>
+</tr>
+<tr>
+<td>CZ03</td>
+<td>true</td>
+<td>Czechia</td>
+<td>Region3</td>
+<td></td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<h2 id="global-parameters">Global parameters<a class="headerlink" href="#global-parameters" title="Permanent link">#</a></h2>
+<p>Input <code>csv</code> file responsible for defining global parameters for simulation. There can be only one row defined that will be used for all regions.
+Global parameters can also be defined inside configuration file. In case of same key are defined in both the <code>csv</code> and the configuration file, the <strong><code>csv</code> file has priority</strong>. </p>
+<p>Recommended keys are <a href="../Parameters/#allowed-parameters-for-global-settings">here</a>
+Example file for download is available <a href="./downloads/simulation_data/simulation_global_pars.csv" download="simulation_global_pars.csv"> here</a>.</p>
+<p>Example <code>csv</code>/<code>xlsx</code> file structure:</p>
+<table>
+<thead>
+<tr>
+<th>n_days</th>
+<th>start_day</th>
+<th>use_waning</th>
+<th>unique_mobility_indexes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>90</td>
+<td>2020-01-1</td>
+<td>true</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+<h2 id="interventions">Interventions<a class="headerlink" href="#interventions" title="Permanent link">#</a></h2>
+<p>Input <code>csv</code> file responsible for defining policy interventions during the simulation. There can be multiple interventions depending on the <em>true</em> value of each row.
+More info about intervention can be found <a href="../examples/exampleE5A_1/">here</a> and <a href="../examples/exampleE5A_2/">here</a>.
+Example file for download available <a href="./downloads/simulation_data/simulation_interventions.csv" download="simulation_interventions.csv"> here</a>.</p>
+<h1 id="example-configuration-json">Example configuration <code>json</code><a class="headerlink" href="#example-configuration-json" title="Permanent link">#</a></h1>
+<pre><code class="language-json">{
+    &quot;parallel_run&quot;: true,
+    &quot;region_parameters&quot;:
+    {
+        &quot;filepath&quot;:&quot;&lt;Path_to_sandbox&gt;/input_data/simulation_configuration_files/simulation_region_pars.csv&quot;
+    },
+    &quot;interventions&quot;:
+    {
+        &quot;filepath&quot;:&quot;&lt;Path_to_sandbox&gt;/input_data/simulation_configuration_files/simulation_interventions.csv&quot;
+    },
+    &quot;variants&quot;:
+    {
+        &quot;filepath&quot;:&quot;&quot;
+    },
+    &quot;mobility&quot;:
+    {
+        &quot;value&quot;:true,
+        &quot;filepath&quot;:&quot;&lt;Path_to_sandbox&gt;/input_data/simulation_configuration_files/NUTS2_mobility_data.csv&quot;
+    },
+    &quot;population_size&quot;:
+    {
+        &quot;filepath&quot;:&quot;&lt;Path_to_sandbox&gt;/input_data/data/population_age_distributions.csv&quot;
+    },
+    &quot;global_parameters&quot;:
+    {
+        &quot;filepath&quot;:&quot;&lt;Path_to_sandbox&gt;/input_data/simulation_configuration_files/simulation_global_pars.csv&quot;
+    }
+}
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../Synthetic_pop_settings/" class="btn btn-neutral float-left" title="Synthetic population configuration file"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Report_settings/" class="btn btn-neutral float-right" title="Report module configuration file">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../Synthetic_pop_settings/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../Report_settings/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../javascripts/mathjax.js" defer></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

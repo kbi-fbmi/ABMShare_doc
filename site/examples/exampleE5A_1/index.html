@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>T5.1 Simulation - Interventions - abmSHARE Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "T5.1 Simulation - Interventions";
+        var mkdocs_page_input_path = "examples\\exampleE5A_1.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> abmSHARE Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              
+                      <p class="caption"><span class="caption-text">About</span></p>
+              
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../..">Welcome to abmSHARE documentation</a>
+                  </li>
+              </ul>
+              
+                      <p class="caption"><span class="caption-text">Tutorials</span></p>
+              
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE1/">T1 Getting Started with abmSHARE</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE2/">T2 Importing/Exporting data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE3/">T3 Ways for run</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE4/">T4 Creating population</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE4_1/">T4.1 Population input data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE5/">T5 Creating simulation</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">T5.1 Simulation - Interventions</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#how-to-define-an-intervention">How to define an intervention</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#intervention-timeline-settings">Intervention timeline settings</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#settings-for-beta-interventions">Settings for beta interventions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#definition-of-intervention-region">Definition of intervention region</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#definition-of-multiple-interventions">Definition of multiple interventions</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE5A_2/">T5.2 Simulation - Intervention types</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE5B/">T5.3 Simulation - Immunity and variants</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE6/">T6 Reporting outputs</a>
+                  </li>
+              </ul>
+              
+                      <p class="caption"><span class="caption-text">Module Configurations Description</span></p>
+              
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Extension_settings/">Main configuration file</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Synthetic_pop_settings/">Synthetic population configuration file</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Simulation_settings/">Simulation configuration file</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Report_settings/">Report module configuration file</a>
+                  </li>
+              </ul>
+              
+                  <ul><li>
+                      <a href="../../Downloads/" style="padding: 0; font-size: inherit; line-height: inherit">
+              
+                      <p class="caption"><span class="caption-text">Downloads</span></p>
+              
+                      </a>
+                  </li></ul>
+              
+              <ul>
+              </ul>
+              
+                  <ul><li>
+                      <a href="../../Parameters/" style="padding: 0; font-size: inherit; line-height: inherit">
+              
+                      <p class="caption"><span class="caption-text">Parameters</span></p>
+              
+                      </a>
+                  </li></ul>
+              
+              <ul>
+              </ul>
+              
+                  <ul><li>
+                      <a href="../../ChangeLog/" style="padding: 0; font-size: inherit; line-height: inherit">
+              
+                      <p class="caption"><span class="caption-text">Change Log</span></p>
+              
+                      </a>
+                  </li></ul>
+              
+              <ul>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">abmSHARE Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Tutorials &raquo;</li>
+      <li>T5.1 Simulation - Interventions</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="interventions">Interventions<a class="headerlink" href="#interventions" title="Permanent link">#</a></h1>
+<p>For defining special interaction in simulation such as contact tracing, testing agents, or region lockdowns, you can use Covasim interventions. Intervention can be stacked, so there can be the same intervention defined several times with different parameters such as different start day of the intervention, changes across layers affected by the intervention, or other different values related to a specific intervention. More information about interventions can be found in <a href="../exampleE5A_2/">T5.2 Simulation - Intervention types</a>.</p>
+<p>As other simulation parameters, an intervention can be defined in several ways: globally for all regions, for each region of the same <code>region_parent_name</code> (for example, <em>Czechia</em>), or separately for each region of the simulation. </p>
+<p><strong>Note: Some interventions are dependent on a different intervention as mentioned in their description</strong></p>
+<p>Interventions are defined in <code>*.csv</code> or <code>*.xlsx</code> file, which contains the correct attributes (columns) for each intervention and valid data. You can define multiple interventions and turn them on/off by <em>key:use</em> in the file. It can be also defined as global/state or it can be region-specific.</p>
+<p><strong>Interventions are defined in <a href="../../downloads/simulation_data/simulation_interventions.csv">Simulation intervention file</a></strong>.</p>
+<h2 id="how-to-define-an-intervention">How to define an intervention<a class="headerlink" href="#how-to-define-an-intervention" title="Permanent link">#</a></h2>
+<p>Specific interventions with basic information and requirements are available in <a href="../exampleE5A_2/#intervention-types">T5.2 Simulation - Intervention types</a> section.
+The core element is to have a proper <code>csv</code>/<code>xlsx</code> file with correctly defined attributes. Necessary attributes for each intervention are:</p>
+<ul>
+<li><strong>location_code</strong> <em>(str)</em>  related to region/country or global (states are based on <em>key:region_parent_name</em> which is defined in <a href="../exampleE5/#region-specific-parameters">Region specific parameters</a>)</li>
+<li><strong>use</strong> <em>(bool)</em>  <code>true</code> for an intervention, <code>false</code> if it is to be ignored </li>
+<li><strong>label</strong> <em>(str)</em> for the intervention, user defined</li>
+<li><strong>intervention_type</strong> <em>(str)</em> such as <code>mobility_change</code>, <code>beta_change</code> etc. described in <a href="../exampleE5A_2/#intervention-types">Intervention types</a></li>
+</ul>
+<p><strong>An example of intervention attributes:</strong></p>
+<table>
+<thead>
+<tr>
+<th>location_code</th>
+<th>use</th>
+<th>label</th>
+<th>intervention_type</th>
+<th>start_day</th>
+<th>num_days</th>
+<th>end_day</th>
+<th>beta_change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CZ01</td>
+<td>true</td>
+<td>mob_change</td>
+<td>mobility_change</td>
+<td>2020-03-01</td>
+<td></td>
+<td>2020-05-19</td>
+<td></td>
+</tr>
+<tr>
+<td>Czechia</td>
+<td>false</td>
+<td>mob_change</td>
+<td>mobility_change</td>
+<td></td>
+<td>[10,25]</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>global</td>
+<td>true</td>
+<td>beta_change</td>
+<td>mobility_change</td>
+<td></td>
+<td>[10,25]</td>
+<td></td>
+<td>"[0.5]"</td>
+</tr>
+</tbody>
+</table>
+<h2 id="intervention-timeline-settings">Intervention timeline settings<a class="headerlink" href="#intervention-timeline-settings" title="Permanent link">#</a></h2>
+<p>For the most user-friendly experience there is a complex method that calculates the correct timeline of the intervention.
+You can supply information about starting/ending time of intervention in two ways:</p>
+<ul>
+<li>Format for date time is in "YYYY-MM-DD" format</li>
+<li>Format for number of days (takes effect from the start date of the simulation) is integer.</li>
+</ul>
+<p>You can combine starting and ending definitions like in the example for a simulation defined in <code>simulation_global_pars</code> file:</p>
+<ul>
+<li><strong>start_day</strong> : "2020-01-01", <strong>end_day</strong> : "2020-01-25"</li>
+<li><strong>start_day</strong> : 10, <strong>end_day</strong> : 25</li>
+<li><strong>start_day</strong> : "2020-01-01", <strong>num_days</strong> : 25|"[25]"</li>
+<li><strong>num_days</strong> : "[1,25]"</li>
+<li><strong>start_day</strong> : 1, <strong>num_days</strong> : "2020-01-25"</li>
+<li><strong>num_days</strong> : 1|"[10]". <strong>end_day</strong> : "2020-01-25"</li>
+</ul>
+<p>Examples above are all possible combination for calculating the exact same timeline of intervention, which will be from 2020-01-01 to 2020-01-25.</p>
+<h2 id="settings-for-beta-interventions">Settings for beta interventions<a class="headerlink" href="#settings-for-beta-interventions" title="Permanent link">#</a></h2>
+<p>Beta changes in specific intervention can be set as a list of values, or as a single value. 
+When single value is used, it can be used for whole intervention period, or defined as the starting point for the whole simulation period.
+When list of values is used, it must be the same length as the number of days of intervention. </p>
+<p><strong>Examples:</strong></p>
+<ul>
+<li><strong>beta_change</strong> : 0.7, start_day : <em>defined</em>, end_day : <em>defined</em> 
+<br>-&gt; beta will be 0.7 since start day of intervention period, after end day, it returns to 1</li>
+<li><strong>beta_change</strong> : 0.7, start_day : <em>defined</em>, end_day : <em>not defined</em> 
+<br>-&gt; beta will be 0.7 since start day of intervention period for the rest of simulation period</li>
+<li><strong>beta_change</strong> : [0.7,0.9], start_day : <em>defined</em>, end_day : <em>defined</em> 
+<br>-&gt; beta will be 0.7 since start day of <strong>intervention</strong> period, after that it will be 0.9 for the rest of intervention period, after end day, it returns to 1</li>
+<li><strong>beta_change</strong> : [0.7,0.9], start_day : <em>not defined</em>, end_day : <em>defined</em> 
+<br>-&gt; beta will be 0.7 since start day of <strong>simulation</strong>, after end day it will be set to 0.9 for the rest of simulation period</li>
+</ul>
+<h2 id="definition-of-intervention-region">Definition of intervention region<a class="headerlink" href="#definition-of-intervention-region" title="Permanent link">#</a></h2>
+<p>There are three ways to define intervention in specific regions.
+Also you can defined multiple intervention, and enable only a selected ones by explicitly setting the <em>use</em> parameter to <em>true/false</em>:</p>
+<p>Example for a region defined in <code>csv</code>:</p>
+<table>
+<thead>
+<tr>
+<th>location_code</th>
+<th>use</th>
+<th>region_parent_name</th>
+<th>name</th>
+<th>popfile</th>
+<th>pop_infected</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CZ01</td>
+<td>true</td>
+<td>Czechia</td>
+<td>Region1</td>
+<td>/absolute/path/to/popfile0.pop</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p>Example for a region defined by <code>location_code</code>:</p>
+<table>
+<thead>
+<tr>
+<th>location_code</th>
+<th>use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CZ01</td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+<p>Example for an intervention to all regions enabled in the simulation:</p>
+<table>
+<thead>
+<tr>
+<th>location_code</th>
+<th>use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>global</td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+<p>Example for regions defined by the <em>region_parent_name</em> in the main region <code>csv</code> file:</p>
+<table>
+<thead>
+<tr>
+<th>location_code</th>
+<th>use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Czechia</td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+<h2 id="definition-of-multiple-interventions">Definition of multiple interventions<a class="headerlink" href="#definition-of-multiple-interventions" title="Permanent link">#</a></h2>
+<p>In the intervention file you can define multiple intervention by simply adding a column/keys/attributes for each of them and indicating only keys which are correspond to the intervention type. For example, if you want to define two interventions, one for mobility and one for a beta change:</p>
+<table>
+<thead>
+<tr>
+<th>location_code</th>
+<th>use</th>
+<th>label</th>
+<th>intervention_type</th>
+<th>start_day</th>
+<th>num_days</th>
+<th>end_day</th>
+<th>beta_change</th>
+<th>layers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CZ01</td>
+<td>true</td>
+<td>Region lockdown CZ01</td>
+<td>mobility_change</td>
+<td>2020-03-01</td>
+<td></td>
+<td>2020-05-19</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>CZ02</td>
+<td>true</td>
+<td>Region lockdown CZ02</td>
+<td>mobility_change</td>
+<td></td>
+<td>[10,25]</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>global</td>
+<td>true</td>
+<td>Beta change for specific time</td>
+<td>beta_change</td>
+<td>2020-01-01</td>
+<td></td>
+<td>2020-03-19</td>
+<td>[0.5]</td>
+<td>[w,s]</td>
+</tr>
+<tr>
+<td>global</td>
+<td>true</td>
+<td>Beta change from start to end of simulation</td>
+<td>beta_change</td>
+<td>2020-01-10</td>
+<td>15</td>
+<td></td>
+<td>0.7</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../exampleE5/" class="btn btn-neutral float-left" title="T5 Creating simulation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../exampleE5A_2/" class="btn btn-neutral float-right" title="T5.2 Simulation - Intervention types">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../exampleE5/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../exampleE5A_2/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../javascripts/mathjax.js" defer></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

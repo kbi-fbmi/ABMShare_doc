@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Main configuration file - abmSHARE Documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Main configuration file";
+        var mkdocs_page_input_path = "Extension_settings.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> abmSHARE Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              
+                      <p class="caption"><span class="caption-text">About</span></p>
+              
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome to abmSHARE documentation</a>
+                  </li>
+              </ul>
+              
+                      <p class="caption"><span class="caption-text">Tutorials</span></p>
+              
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../examples/exampleE1/">T1 Getting Started with abmSHARE</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../examples/exampleE2/">T2 Importing/Exporting data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../examples/exampleE3/">T3 Ways for run</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../examples/exampleE4/">T4 Creating population</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../examples/exampleE4_1/">T4.1 Population input data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../examples/exampleE5/">T5 Creating simulation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../examples/exampleE5A_1/">T5.1 Simulation - Interventions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../examples/exampleE5A_2/">T5.2 Simulation - Intervention types</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../examples/exampleE5B/">T5.3 Simulation - Immunity and variants</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../examples/exampleE6/">T6 Reporting outputs</a>
+                  </li>
+              </ul>
+              
+                      <p class="caption"><span class="caption-text">Module Configurations Description</span></p>
+              
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Main configuration file</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#initialize-module-settings">Initialize module settings</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#auto-save-settings">Auto save settings</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#settings-for-synthetic-population-module">Settings for Synthetic population module</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#settings-for-simulation-module">Settings for Simulation module</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#settings-for-report-module">Settings for Report module</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Synthetic_pop_settings/">Synthetic population configuration file</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Simulation_settings/">Simulation configuration file</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Report_settings/">Report module configuration file</a>
+                  </li>
+              </ul>
+              
+                  <ul><li>
+                      <a href="../Downloads/" style="padding: 0; font-size: inherit; line-height: inherit">
+              
+                      <p class="caption"><span class="caption-text">Downloads</span></p>
+              
+                      </a>
+                  </li></ul>
+              
+              <ul>
+              </ul>
+              
+                  <ul><li>
+                      <a href="../Parameters/" style="padding: 0; font-size: inherit; line-height: inherit">
+              
+                      <p class="caption"><span class="caption-text">Parameters</span></p>
+              
+                      </a>
+                  </li></ul>
+              
+              <ul>
+              </ul>
+              
+                  <ul><li>
+                      <a href="../ChangeLog/" style="padding: 0; font-size: inherit; line-height: inherit">
+              
+                      <p class="caption"><span class="caption-text">Change Log</span></p>
+              
+                      </a>
+                  </li></ul>
+              
+              <ul>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">abmSHARE Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Module Configurations Description &raquo;</li>
+      <li>Main configuration file</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="main-configuration-file-settings">Main configuration file settings<a class="headerlink" href="#main-configuration-file-settings" title="Permanent link">#</a></h1>
+<h2 id="initialize-module-settings">Initialize module settings<a class="headerlink" href="#initialize-module-settings" title="Permanent link">#</a></h2>
+<ul>
+<li>synthpop_initialize <strong>(bool)</strong> - to enable synthetic population module (creating <code>jsons</code> or pop creation)</li>
+<li>simulation_initialize <strong>(bool)</strong> - to enable simulation module</li>
+<li>report_module_initialize <strong>(bool)</strong> -  to enable report module for generating <code>csv</code>/<code>xlsx</code> outputs</li>
+<li>test <strong>(bool)</strong> <strong>OPTIONAL</strong> -  to enable the test mode of a simulation. Recommended approach for debugging or for fast testing (loads 20,000 agents per region) </li>
+</ul>
+<h2 id="auto-save-settings">Auto save settings<a class="headerlink" href="#auto-save-settings" title="Permanent link">#</a></h2>
+<p>Auto save settings stands for a system for creating smart outputs. <strong>IMPORTANT there cannot be an underscore in the filepath. Please avoid naming of your folders with underscore.</strong> <br></p>
+<ul>
+<li>value <strong>(bool)</strong> - to enable auto saving <br></li>
+<li>auto_increment <strong>(bool)</strong> - to enable the same name of output folder with date-time suffix <br></li>
+<li>dirname <strong>(string)</strong> - to enable the output into named directory<br></li>
+<li>location <strong>(string)</strong> -  path to output directory where all outputs will be saved. In this newly created directory the one specified with <code>dirname</code> will be used for all files needed in the simulation<br></li>
+<li>copy_files <strong>(object)</strong> - object which can hold information about various items to copy, even when the original module was not initialized<br></li>
+<li>copy_loaded_pop <strong>(bool)</strong> - option for copy population objects, which were created in previous runs and were not created in actual process of the abmSHARE simulation<br></li>
+</ul>
+<h2 id="settings-for-synthetic-population-module">Settings for Synthetic population module<a class="headerlink" href="#settings-for-synthetic-population-module" title="Permanent link">#</a></h2>
+<ul>
+<li>filepath <strong>(string)</strong> - path to Synthetic population configuration file <br></li>
+</ul>
+<h2 id="settings-for-simulation-module">Settings for Simulation module<a class="headerlink" href="#settings-for-simulation-module" title="Permanent link">#</a></h2>
+<ul>
+<li>filepath <strong>(string)</strong> - path to Simulation configuration file<br></li>
+</ul>
+<h2 id="settings-for-report-module">Settings for Report module<a class="headerlink" href="#settings-for-report-module" title="Permanent link">#</a></h2>
+<ul>
+<li>filepath <strong>(string)</strong> - path to Report configuration file <br> </li>
+</ul>
+<h1 id="example-configuration-json">Example configuration json<a class="headerlink" href="#example-configuration-json" title="Permanent link">#</a></h1>
+<pre><code class="language-json">{
+    &quot;initialize&quot;:
+    {
+        &quot;synthpop_initialize&quot;:true,
+        &quot;simulation_initialize&quot;:true,
+        &quot;report_module_initialize&quot;:true
+    },
+    &quot;auto_save_settings&quot;:
+    {
+        &quot;value&quot;:true,
+        &quot;auto_increment&quot;:true,
+        &quot;dirname&quot;:&quot;NoTestValues&quot;,
+        &quot;location&quot;:&quot;/&lt;Path_to_sandbox&gt;/share-covasim/Outputs&quot;,   
+        &quot;copy_files&quot;:
+        {
+            &quot;copy_loaded_pop&quot;:true
+        }
+    },
+    &quot;synthpops_settings&quot;:
+    {
+        &quot;filepath&quot;:&quot;/&lt;Path_to_sandbox&gt;/data/synthpops_configuration.json&quot;
+    },
+    &quot;simulation_settings&quot;:
+    {
+        &quot;filepath&quot;:&quot;/&lt;Path_to_sandbox&gt;/data/covasim_configuration.json&quot;
+    },    
+    &quot;report_settings&quot;:
+    {
+        &quot;filepath&quot;:&quot;/&lt;Path_to_sandbox&gt;/data/test_report_configuration.json&quot;
+    }
+}
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../examples/exampleE6/" class="btn btn-neutral float-left" title="T6 Reporting outputs"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Synthetic_pop_settings/" class="btn btn-neutral float-right" title="Synthetic population configuration file">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../examples/exampleE6/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../Synthetic_pop_settings/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../javascripts/mathjax.js" defer></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

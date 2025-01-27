@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>T4.1 Population input data - abmSHARE Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "T4.1 Population input data";
+        var mkdocs_page_input_path = "examples\\exampleE4_1.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> abmSHARE Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              
+                      <p class="caption"><span class="caption-text">About</span></p>
+              
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../..">Welcome to abmSHARE documentation</a>
+                  </li>
+              </ul>
+              
+                      <p class="caption"><span class="caption-text">Tutorials</span></p>
+              
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE1/">T1 Getting Started with abmSHARE</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE2/">T2 Importing/Exporting data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE3/">T3 Ways for run</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE4/">T4 Creating population</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">T4.1 Population input data</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#types-of-input-data">Types of input data</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#age-distribution-data">Age distribution data</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#region-mobility-data">region mobility data</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#employment-rate-distribution-by-age">Employment rate distribution by age</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#school-enrollment-rate-distribution-by-age">School enrollment rate distribution by age</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#household-head-age-brackets">Household head age brackets</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#household-head-age-distribution-by-family-size">Household head age distribution by family size</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#household-size-distribution">Household size distribution</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#school-size-brackets">School size brackets</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#school-size-distribution">School size distribution</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#school-size-distribution-by-type">School size distribution by type</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#school-types-by-age">School types by age</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#workplace-size-counts-by-number-of-people">Workplace size counts by number of people</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE5/">T5 Creating simulation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE5A_1/">T5.1 Simulation - Interventions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE5A_2/">T5.2 Simulation - Intervention types</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE5B/">T5.3 Simulation - Immunity and variants</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE6/">T6 Reporting outputs</a>
+                  </li>
+              </ul>
+              
+                      <p class="caption"><span class="caption-text">Module Configurations Description</span></p>
+              
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Extension_settings/">Main configuration file</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Synthetic_pop_settings/">Synthetic population configuration file</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Simulation_settings/">Simulation configuration file</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Report_settings/">Report module configuration file</a>
+                  </li>
+              </ul>
+              
+                  <ul><li>
+                      <a href="../../Downloads/" style="padding: 0; font-size: inherit; line-height: inherit">
+              
+                      <p class="caption"><span class="caption-text">Downloads</span></p>
+              
+                      </a>
+                  </li></ul>
+              
+              <ul>
+              </ul>
+              
+                  <ul><li>
+                      <a href="../../Parameters/" style="padding: 0; font-size: inherit; line-height: inherit">
+              
+                      <p class="caption"><span class="caption-text">Parameters</span></p>
+              
+                      </a>
+                  </li></ul>
+              
+              <ul>
+              </ul>
+              
+                  <ul><li>
+                      <a href="../../ChangeLog/" style="padding: 0; font-size: inherit; line-height: inherit">
+              
+                      <p class="caption"><span class="caption-text">Change Log</span></p>
+              
+                      </a>
+                  </li></ul>
+              
+              <ul>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">abmSHARE Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Tutorials &raquo;</li>
+      <li>T4.1 Population input data</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="input-data-for-creating-a-synthetic-population">Input data for creating a synthetic population<a class="headerlink" href="#input-data-for-creating-a-synthetic-population" title="Permanent link">#</a></h1>
+<p>You can create a more specific synthetic population by providing more precise data about the population distribution for regions. This section describes all the input data that can be used for creating a synthetic population. You can create a synthetic population with only a few necessary input data and values. However, if you want to create a more specific synthetic population, you can provide more specific inputs described in this section. </p>
+<p>You can specify these specific data globally as described in <a href="../../Synthetic_pop_settings/#input-data-global-dict">Synthpops configuration file</a> as a <code>csv</code>/<code>xlsx</code> file containing of paths to the files. Also you can specify them as 'default','all', or for each region or like 'CZ01' for each parent region name, like 'Czechia'.</p>
+<p><strong>NOTE: All keys (column names) must be used in the default format. DO NOT RENAME THEM!</strong></p>
+<h2 id="types-of-input-data">Types of input data<a class="headerlink" href="#types-of-input-data" title="Permanent link">#</a></h2>
+<blockquote>
+<p><strong>necessary input data:</strong></p>
+</blockquote>
+<ul>
+<li>Age distribution</li>
+</ul>
+<blockquote>
+<p><strong>Optional input data:</strong></p>
+</blockquote>
+<ul>
+<li>Region mobility data</li>
+<li>Employment rate</li>
+<li>Enrollment rate</li>
+<li>Household head age brackets</li>
+<li>Household head age distribution by family size</li>
+<li>School size brackets</li>
+<li>School size distribution</li>
+<li>School size distribution by type</li>
+<li>School types by age</li>
+<li>Workplace size counts by the number of people</li>
+</ul>
+<h3 id="age-distribution-data">Age distribution data<a class="headerlink" href="#age-distribution-data" title="Permanent link">#</a></h3>
+<p>The age distribution contains information about each region and its age distribution. You can use 16, 18 or 20 brackets for the age distribution settings. Also this is the place for providing information about the region code, its name and sum of the population. The distribution of all brackets must sum up to 1.0.</p>
+<ul>
+<li>For 16 brackets: 00_04,...,70_74,75_100</li>
+<li>For 18 brackets: 00_04,...,80_84,85_100</li>
+<li>For 20 brackets: 00_04,...,90_94,95_100</li>
+</ul>
+<p><em>An example</em> can be downloaded <a href="../../synthpops_data/population_age_distribution.xlsx">here.</a></p>
+<table>
+<thead>
+<tr>
+<th>location_code</th>
+<th>name</th>
+<th>population</th>
+<th>00_04</th>
+<th>05_09</th>
+<th>...</th>
+<th>95_99</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CZ01</td>
+<td>Hlavní město Praha</td>
+<td>1241664</td>
+<td>0.057312606308953</td>
+<td>0.041531364362662</td>
+<td>...</td>
+<td>0.0007804043606</td>
+</tr>
+<tr>
+<td>CZ02</td>
+<td>Středočeský kraj</td>
+<td>1279345</td>
+<td>0.063014276836975</td>
+<td>0.051952366249917</td>
+<td>...</td>
+<td>0.000469771640957</td>
+</tr>
+</tbody>
+</table>
+<h3 id="region-mobility-data">region mobility data<a class="headerlink" href="#region-mobility-data" title="Permanent link">#</a></h3>
+<p>Region mobility data can be used for adding people from different regions to a selected region. Basically, it simulates the number of people traveling across regions. These traveling agents are picked randomly from agents traveling from each region. The diagonal is empty, because it is not possible to travel from region to itself.</p>
+<p>If the distribution information across regions is not known, you can specify a wider area, for example, a country. So you can use <code>Czechia</code> instead of <code>CZ01</code>, ..., <code>CZXX</code>. However, if you want to specify each region, you can do that as well, or you can also specify only some regions and the rest will be filled with the country level data. <strong>NOTE: for a wider area you have to specify the country name not only in input data, but also in <a href="../../Synthetic_pop_settings/#settings-for-region-configuration">Synthpops region configuration creater</a></strong></p>
+<p><em>An example</em> can be downloaded <a href="../../synthpops_data/NUTS2_mobility_data.csv">here.</a></p>
+<table>
+<thead>
+<tr>
+<th>location_code</th>
+<th>name</th>
+<th>CZ01</th>
+<th>CZ02</th>
+<th>...</th>
+<th>CZ08</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CZ01</td>
+<td>Hlavní město Praha</td>
+<td></td>
+<td>15847</td>
+<td>...</td>
+<td>169</td>
+</tr>
+<tr>
+<td>CZ02</td>
+<td>Středočeský kraj</td>
+<td>100045</td>
+<td></td>
+<td>...</td>
+<td>121</td>
+</tr>
+</tbody>
+</table>
+<h3 id="employment-rate-distribution-by-age">Employment rate distribution by age<a class="headerlink" href="#employment-rate-distribution-by-age" title="Permanent link">#</a></h3>
+<p>Employment distribution data stands for defining the probability of being employed at certain age defined from start year to the end year, commonly in the interval from 16 to 100 years of age. It can also hold region codes for another regions, but it will run only selected based on <a href="../exampleE4/">main synthetic population settings</a>. It can use keys for region codes or region names, optionally. <strong>NOTE: It depends on <code>region_data_name</code> defined in region settings, in supplied data must least one region name which correspond with region location code or a wider area name must be supplied</strong>.</p>
+<p><em>An example</em> can be downloaded <a href="../../synthpops_data/employment_rates_by_age.csv">here.</a></p>
+<table>
+<thead>
+<tr>
+<th>Age</th>
+<th>CZ01</th>
+<th>CZ02</th>
+<th>...</th>
+<th>CZ08</th>
+<th>Czechia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>16</td>
+<td>0.332</td>
+<td>0.319</td>
+<td>...</td>
+<td>0.241</td>
+<td>0</td>
+</tr>
+<tr>
+<td>17</td>
+<td>0.332</td>
+<td>0.237</td>
+<td>...</td>
+<td>0.310</td>
+<td>0</td>
+</tr>
+<tr>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>0</td>
+</tr>
+<tr>
+<td>100</td>
+<td>0.064</td>
+<td>0.039</td>
+<td>..</td>
+<td>0.015</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="school-enrollment-rate-distribution-by-age">School enrollment rate distribution by age<a class="headerlink" href="#school-enrollment-rate-distribution-by-age" title="Permanent link">#</a></h3>
+<p>School enrollment distribution data stands for defining the probability of being enrolled in school at certain age defined from start year to the end year, again from 16 to 100 years of age. The same instructions apply for region coding as in the employment rate distribution information above.</p>
+<p><em>An example</em> can be downloaded <a href="../../synthpops_data/enrollment_rates_by_age.csv">here.</a></p>
+<table>
+<thead>
+<tr>
+<th>Age</th>
+<th>CZ01</th>
+<th>CZ02</th>
+<th>...</th>
+<th>CZ08</th>
+<th>Czechia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>...</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<td>17</td>
+<td>0.974</td>
+<td>0.974</td>
+<td>...</td>
+<td>0.974</td>
+<td>0.974</td>
+</tr>
+<tr>
+<td>18</td>
+<td>0.707</td>
+<td>0.707</td>
+<td>...</td>
+<td>0.707</td>
+<td>0.707</td>
+</tr>
+<tr>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<td>100</td>
+<td>0</td>
+<td>0</td>
+<td>...</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="household-head-age-brackets">Household head age brackets<a class="headerlink" href="#household-head-age-brackets" title="Permanent link">#</a></h3>
+<p>Household head age brackets are used for defining the age brackets for household head. It is used for creating household head age distribution. Every bracket is defined from minimum age to the maximum age, commonly between 15 and 100 years by step of 5. <strong>NOTE: all household related input data must be based on this brackets</strong></p>
+<p><em>An Example</em> can be downloaded <a href="../../synthpops_data/household_head_age_brackets.csv">here.</a></p>
+<table>
+<thead>
+<tr>
+<th>min_age</th>
+<th>max_age</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>15</td>
+<td>19</td>
+</tr>
+<tr>
+<td>20</td>
+<td>24</td>
+</tr>
+<tr>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<td>75</td>
+<td>79</td>
+</tr>
+<tr>
+<td>80</td>
+<td>100</td>
+</tr>
+</tbody>
+</table>
+<h3 id="household-head-age-distribution-by-family-size">Household head age distribution by family size<a class="headerlink" href="#household-head-age-distribution-by-family-size" title="Permanent link">#</a></h3>
+<p>Household head age distribution by family size is used for defining the number of household heads at certain household head age brackets. Each row in this table specifies the distribution for a given family size. The family size is the first entry in the row. The remaining entries are, for each household head age bracket, the number or percentage of households with a household head in that age bracket. In the <code>*.csv</code> file the certain household head age brackets are defined by number from 0 to N (based on total number of brackets).</p>
+<p><em>An example</em> can be downloaded <a href="../../synthpops_data/household_head_age_distribution_by_family_size.csv">here.</a></p>
+<table>
+<thead>
+<tr>
+<th>number</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>...</th>
+<th>13</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1.0</td>
+<td>1.0</td>
+<td>1.0</td>
+<td>...</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>2</td>
+<td>163.0</td>
+<td>999.</td>
+<td>2316.0</td>
+<td>...</td>
+<td>2230</td>
+</tr>
+<tr>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<td>7</td>
+<td>24.0</td>
+<td>33.0</td>
+<td>63.0</td>
+<td>...</td>
+<td>144.0</td>
+</tr>
+<tr>
+<td>8</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>...</td>
+<td>0.0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="household-size-distribution">Household size distribution<a class="headerlink" href="#household-size-distribution" title="Permanent link">#</a></h3>
+<p>Household size distribution is used for defining the distribution of households at certain household size. Each row in this table specifies the distribution for a given household size. It depends on the household head age brackets. Every row is defined as the percentage distribution across given every row of household head age bracket. <strong>NOTE: this household input data depends on household head age brackets. Also the sum of all distributions must be equal to 1</strong>.</p>
+<p><em>An example</em> can be downloaded <a href="../../synthpops_data/household_size_distribution.csv">here.</a></p>
+<table>
+<thead>
+<tr>
+<th>number</th>
+<th>distribution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>0.064</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0.108</td>
+</tr>
+<tr>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<td>7</td>
+<td>0.128</td>
+</tr>
+<tr>
+<td>8</td>
+<td>0.0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="school-size-brackets">School size brackets<a class="headerlink" href="#school-size-brackets" title="Permanent link">#</a></h3>
+<p>School size brackets are used for defining the size of school. It is used for creating school size distribution. Every bracket is defined from the minimum to the maximum size. <strong>NOTE: all school related input data must be based on these brackets</strong></p>
+<p><em>An example</em> can be downloaded <a href="../../synthpops_data/school_size_brackets.csv">here.</a></p>
+<table>
+<thead>
+<tr>
+<th>min</th>
+<th>max</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>20</td>
+<td>50</td>
+</tr>
+<tr>
+<td>51</td>
+<td>100</td>
+</tr>
+<tr>
+<td>101</td>
+<td>300</td>
+</tr>
+<tr>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<td>2301</td>
+<td>2700</td>
+</tr>
+</tbody>
+</table>
+<h3 id="school-size-distribution">School size distribution<a class="headerlink" href="#school-size-distribution" title="Permanent link">#</a></h3>
+<p>School size distribution is used for defining the number of schools at certain school size brackets. Each row in this table specifies the distribution for a given school size. It depends on the school size brackets. Every row is defined as the percentage distribution across given every row of the school size bracket.</p>
+<p><em>An example</em> can be downloaded <a href="../../synthpops_data/school_size_distribution.csv">here.</a></p>
+<table>
+<thead>
+<tr>
+<th>distribution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.06024096385542162</td>
+</tr>
+<tr>
+<td>0.07831325301204821</td>
+</tr>
+<tr>
+<td>...</td>
+</tr>
+<tr>
+<td>0.006024096385542101</td>
+</tr>
+<tr>
+<td>0.0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="school-size-distribution-by-type">School size distribution by type<a class="headerlink" href="#school-size-distribution-by-type" title="Permanent link">#</a></h3>
+<p>School size distribution by type is used for defining the distribution of school size by school type. Each row in this table specifies the distribution for a given school type. It depends on the school size brackets. Every row is defined as the percentage distribution across given every row of school size bracket. You can specify types of school by yourself and set them age distribution in <a href="#school-types-by-age">school types by age</a> section. <strong>NOTE: this school input data depends on school size brackets and on <a href="#school-types-by-age">school types by age</a>. Also every row distribution sum must be equal to 1</strong>.</p>
+<p><code>pk</code> = preschool, <code>es</code> = elementary school, <code>ms</code> = middle school, <code>hs</code> = high school, <code>uv</code> = university</p>
+<p><em>An example</em> can be downloaded <a href="../../synthpops_data/school_size_distribution_by_type.csv">here.</a></p>
+<table>
+<thead>
+<tr>
+<th>school_type</th>
+<th>distribution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pk</td>
+<td>"0.012658227848101266, 0.0, ..., 0.43037974683544306, 0.0, 0.0, 0.0, 0.0, 0.0,"</td>
+</tr>
+<tr>
+<td>es</td>
+<td>"0.012658227848101266, 0.0, ..., 0.43037974683544306, 0.0, 0.0, 0.0, 0.0, 0.0,"</td>
+</tr>
+<tr>
+<td>hs</td>
+<td>"0.07407407407407407, 0.1111111111111111, ... , 0.18518518518518517, 0.0, 0.0 , 0.0"</td>
+</tr>
+<tr>
+<td>uv</td>
+<td>"0.027522935779816515, 0.009174311926605505, ... , 0.2018348623853211, 0.3944954128440367, 0.0"</td>
+</tr>
+</tbody>
+</table>
+<p><strong>NOTE: distribution must be in double quotes to be validly parsed</strong></p>
+<h3 id="school-types-by-age">School types by age<a class="headerlink" href="#school-types-by-age" title="Permanent link">#</a></h3>
+<p>School types by age is used for defining the age distribution for each school type. It is used for creating school age distribution. Every row in this table specifies the distribution for a given school type. You can define here those school types.</p>
+<p><code>pk</code> = preschool, <code>es</code> = elementary school, <code>ms</code> = middle school, <code>hs</code> = high school, <code>uv</code> = university</p>
+<p><em>An example</em> can be downloaded <a href="../../synthpops_data/school_types_by_age.csv">here.</a></p>
+<table>
+<thead>
+<tr>
+<th>school_type</th>
+<th>min_age</th>
+<th>max_age</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pk</td>
+<td>3</td>
+<td>5</td>
+</tr>
+<tr>
+<td>es</td>
+<td>6</td>
+<td>10</td>
+</tr>
+<tr>
+<td>hs</td>
+<td>15</td>
+<td>18</td>
+</tr>
+<tr>
+<td>uv</td>
+<td>19</td>
+<td>100</td>
+</tr>
+</tbody>
+</table>
+<h3 id="workplace-size-counts-by-number-of-people">Workplace size counts by number of people<a class="headerlink" href="#workplace-size-counts-by-number-of-people" title="Permanent link">#</a></h3>
+<p>Workplace size counts is defined by number of people in a specific workplace and the total count of those workplaces. There are defined "brackets" for minimum to maximum agents per workplace and the total count of those workplaces.</p>
+<p><em>An example</em> can be downloaded <a href="../../synthpops_data/workplace_size_counts_by_num_personnel.csv">here.</a></p>
+<table>
+<thead>
+<tr>
+<th>min_people</th>
+<th>max_people</th>
+<th>count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>4</td>
+<td>107682.0</td>
+</tr>
+<tr>
+<td>5</td>
+<td>9</td>
+<td>35584.0</td>
+</tr>
+<tr>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr>
+<td>500</td>
+<td>999</td>
+<td>245.0</td>
+</tr>
+<tr>
+<td>1000</td>
+<td>1999</td>
+<td>150.0</td>
+</tr>
+</tbody>
+</table>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../exampleE4/" class="btn btn-neutral float-left" title="T4 Creating population"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../exampleE5/" class="btn btn-neutral float-right" title="T5 Creating simulation">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../exampleE4/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../exampleE5/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../javascripts/mathjax.js" defer></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

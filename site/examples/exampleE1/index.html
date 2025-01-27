@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>T1 Getting Started with abmSHARE - abmSHARE Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "T1 Getting Started with abmSHARE";
+        var mkdocs_page_input_path = "examples\\exampleE1.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> abmSHARE Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              
+                      <p class="caption"><span class="caption-text">About</span></p>
+              
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../..">Welcome to abmSHARE documentation</a>
+                  </li>
+              </ul>
+              
+                      <p class="caption"><span class="caption-text">Tutorials</span></p>
+              
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">T1 Getting Started with abmSHARE</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#installation-at-your-desktop-computer">Installation at your desktop computer</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#connection-to-server-and-sandbox-folder-structure">Connection to server and sandbox folder structure</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#the-sandbox-folder">The sandbox folder</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#structure-of-the-sandbox-folder">Structure of the sandbox folder</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#input-data-folder">Input data folder</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#configuration-files">Configuration files</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#data-folder">Data folder</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#simulation-configuration-files-folder">Simulation configuration files folder</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#simulation-immunity-files-folder">Simulation immunity files folder</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#synthetic-population-configuration-files-folder">Synthetic population configuration files folder</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#synthetic-population-other-specific-input-data-folder">Synthetic population other specific input data folder</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#outputs-folder">Outputs folder</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#other-individual-files">Other individual files</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#start-file">Start file</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE2/">T2 Importing/Exporting data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE3/">T3 Ways for run</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE4/">T4 Creating population</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE4_1/">T4.1 Population input data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE5/">T5 Creating simulation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE5A_1/">T5.1 Simulation - Interventions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE5A_2/">T5.2 Simulation - Intervention types</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE5B/">T5.3 Simulation - Immunity and variants</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE6/">T6 Reporting outputs</a>
+                  </li>
+              </ul>
+              
+                      <p class="caption"><span class="caption-text">Module Configurations Description</span></p>
+              
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Extension_settings/">Main configuration file</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Synthetic_pop_settings/">Synthetic population configuration file</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Simulation_settings/">Simulation configuration file</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Report_settings/">Report module configuration file</a>
+                  </li>
+              </ul>
+              
+                  <ul><li>
+                      <a href="../../Downloads/" style="padding: 0; font-size: inherit; line-height: inherit">
+              
+                      <p class="caption"><span class="caption-text">Downloads</span></p>
+              
+                      </a>
+                  </li></ul>
+              
+              <ul>
+              </ul>
+              
+                  <ul><li>
+                      <a href="../../Parameters/" style="padding: 0; font-size: inherit; line-height: inherit">
+              
+                      <p class="caption"><span class="caption-text">Parameters</span></p>
+              
+                      </a>
+                  </li></ul>
+              
+              <ul>
+              </ul>
+              
+                  <ul><li>
+                      <a href="../../ChangeLog/" style="padding: 0; font-size: inherit; line-height: inherit">
+              
+                      <p class="caption"><span class="caption-text">Change Log</span></p>
+              
+                      </a>
+                  </li></ul>
+              
+              <ul>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">abmSHARE Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Tutorials &raquo;</li>
+      <li>T1 Getting Started with abmSHARE</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="installation-and-remote-access">Installation and Remote Access<a class="headerlink" href="#installation-and-remote-access" title="Permanent link">#</a></h1>
+<h2 id="installation-at-your-desktop-computer">Installation at your desktop computer<a class="headerlink" href="#installation-at-your-desktop-computer" title="Permanent link">#</a></h2>
+<h2 id="connection-to-server-and-sandbox-folder-structure">Connection to server and sandbox folder structure<a class="headerlink" href="#connection-to-server-and-sandbox-folder-structure" title="Permanent link">#</a></h2>
+<ul>
+<li>We are preparing a new tutorial to run ABMShare with tailored Google Colab notebooks. Now you can clone the  <a href="https://github.com/kbi-fbmi/ABMShare"> original repozitory </a> and run it locally,</li>
+</ul>
+<h2 id="the-sandbox-folder">The sandbox folder<a class="headerlink" href="#the-sandbox-folder" title="Permanent link">#</a></h2>
+<p>The sandbox folder contains all the necessary files for running abmSHARE. The folder is updated for all users after each system update. Previous version of the system are stored with the system update date appended as <code>sandbox_[date]</code>. The sandbox folder always contains the updated settings. Please check new/old keys in new and old configuration files for possible changes. Changes are documented in the <a href="../../ChangeLog/">Changelog page</a>.</p>
+<h3 id="structure-of-the-sandbox-folder">Structure of the sandbox folder<a class="headerlink" href="#structure-of-the-sandbox-folder" title="Permanent link">#</a></h3>
+<pre><code class="language-tree">sandbox
+    |   
+    +-- input_data
+    |   +-- data
+        |   +-- Czechia.json
+        |   +-- NUTS2_mobility_data.csv
+        |   +-- population_age_distribution.csv
+    |   +-- simulation_configuration_files
+        |   +-- simulation_interventions.csv
+        |   +-- simulation_global_pars.csv
+        |   +-- simulation_region_pars.csv
+        |   +-- simulation_vacciness.csv
+        |   +-- simulation_variants.csv
+    |   +-- simulation_immunity_files
+        |   +-- immunity_input_files.csv
+        |   +-- vaccine_dose_pars.csv
+        |   +-- vaccine_variant_pars.csv
+        |   +-- variants_cross_immunity.csv
+        |   +-- variants_pars.csv
+    |   +-- synthpops_configuration_files
+        |   +-- pars_file.csv
+        |   +-- synthpops_input_files.csv
+        |   +-- synthpops_region.csv
+    |   +-- synthpops_input_data
+        |   +-- Various files in here        
+    |   +-- main_configuration.json
+    |   +-- report_configuration.json
+    |   +-- main_configuration.json
+    |   +-- simulation_configuration.json
+    |   +-- synthpops_configuration.json
+    +-- logs
+    +-- outputs
+        | 
+    +-- parameters.py
+    +-- results.sh
+    +-- start.sh
+</code></pre>
+<h3 id="input-data-folder">Input data folder<a class="headerlink" href="#input-data-folder" title="Permanent link">#</a></h3>
+<p>This folder contains all configuration files for each module as well as all input data needed for the abmSHARE model to run.
+These inputs are defined in <code>json</code> and/or <code>csv</code> files.</p>
+<h4 id="configuration-files">Configuration files<a class="headerlink" href="#configuration-files" title="Permanent link">#</a></h4>
+<ul>
+<li><code>main_configuration.json</code> file contains all important parameters for all other modules. More information can be found <a href="../../Extension_settings">here</a>.</li>
+<li><code>synthpops_configuration.json</code> file is the synthetic population module configuration file responsible for creating synthetic populations that can serve as inputs into the abmSHARE model. More information can be found <a href="../../Synthetic_pop_settings">here</a>.</li>
+<li><code>simulation_configuration.json</code> file defines the main features of the simulation. It can specify the population created by synthetic population model. More information about settings of this module can be found <a href="../../Simulation_settings">here</a>.</li>
+<li><code>report_configuration.json</code> file creates outputs of each simulation in csv format as well as a summary of the simulation. More information about this module can be found <a href="../../Report_settings">here</a>.</li>
+<li>Other files are available at <a href="../../Downloads/">download page</a>.</li>
+</ul>
+<h4 id="data-folder">Data folder<a class="headerlink" href="#data-folder" title="Permanent link">#</a></h4>
+<blockquote>
+<p><strong>Folder name:</strong> <em>data</em> <br>
+This folder contains three files by default, which can be shared across simulation and synthetic population module.</p>
+</blockquote>
+<ul>
+<li><code>Czechia.json</code> contains the geographic data for Czechia. It is used for creating synthetic populations and for running simulations.</li>
+<li><code>NUTS2_mobility_data.csv</code> contains the mobility data for Czechia. It is used for creating synthetic populations and for running simulations.</li>
+<li><code>population_age_distribution.csv</code> contains the age distribution data for Czechia. It is used for creating synthetic populations and for running simulations.</li>
+</ul>
+<h4 id="simulation-configuration-files-folder">Simulation configuration files folder<a class="headerlink" href="#simulation-configuration-files-folder" title="Permanent link">#</a></h4>
+<blockquote>
+<p><strong>Folder name:</strong> <em>simulation_configuration_files</em><br>
+These files are used for defining the simulation parameters. They are used in the simulation module. More info about thouse files you can find <a href="../exampleE5/">T5 Simulation</a>.</p>
+</blockquote>
+<ul>
+<li><code>simulation_interventions.csv</code> contains the interventions for the simulation. It is used for defining interventions in the simulation module.</li>
+<li><code>simulation_global_pars.csv</code> contains the global parameters for the simulation. It is used for defining global parameters in the simulation module.</li>
+<li><code>simulation_region_pars.csv</code> contains the region-specific parameters for the simulation. It is used for defining region-specific parameters in the simulation module.</li>
+<li><code>simulation_vaccines.csv</code> contains the vaccine parameters for the simulation. It is used for defining vaccine parameters in the simulation module.</li>
+<li><code>simulation_variants.csv</code> contains the variant parameters for the simulation. It is used for defining variant parameters in the simulation module.</li>
+</ul>
+<h4 id="simulation-immunity-files-folder">Simulation immunity files folder<a class="headerlink" href="#simulation-immunity-files-folder" title="Permanent link">#</a></h4>
+<blockquote>
+<p><strong>Folder name:</strong> <em>simulation_immunity_files</em><br>
+These files are used for defining the immunity parameters. They are used in the simulation module. More info about thouse files you can find <a href="../exampleE5B/">T5.3 Simulation - Immunity and variants</a>.</p>
+</blockquote>
+<ul>
+<li><code>immunity_input_files.csv</code> contains the input files for the immunity. It is used for defining the input files in the immunity module.</li>
+<li><code>vaccine_dose_pars.csv</code> contains the vaccine dose parameters for the immunity. It is used for defining the vaccine dose parameters in the immunity module.</li>
+<li><code>vaccine_variant_pars.csv</code> contains the vaccine variant parameters for the immunity. It is used for defining the vaccine variant parameters in the immunity module.</li>
+<li><code>variants_cross_immunity.csv</code> contains the cross-immunity parameters for the immunity. It is used for defining the cross-immunity parameters in the immunity module.</li>
+<li><code>variants_pars.csv</code> contains the variant parameters for the immunity. It is used for defining the variant parameters in the immunity module.</li>
+</ul>
+<h4 id="synthetic-population-configuration-files-folder">Synthetic population configuration files folder<a class="headerlink" href="#synthetic-population-configuration-files-folder" title="Permanent link">#</a></h4>
+<blockquote>
+<p><strong>Folder name:</strong> <em>synthpops_configuration_files</em><br>
+These files are used for defining the synthetic population parameters. They are used in the synthetic population module. More info about thouse files you can find <a href="../../Synthetic_pop_settings/">Synthetic popilation configuration file</a> and on <a href="../exampleE4/">T4 Creating population</a>.</p>
+</blockquote>
+<ul>
+<li><code>pars_file.csv</code> contains the parameters for the synthetic population. It is used for defining the parameters in the synthetic population module.</li>
+<li><code>synthpops_input_files.csv</code> contains the input files for the synthetic population. It is used for defining the input files in the synthetic population module.</li>
+<li><code>synthpops_region.csv</code> contains the region-specific parameters for the synthetic population. It is used for defining the region-specific parameters in the synthetic population module.</li>
+</ul>
+<h4 id="synthetic-population-other-specific-input-data-folder">Synthetic population other specific input data folder<a class="headerlink" href="#synthetic-population-other-specific-input-data-folder" title="Permanent link">#</a></h4>
+<blockquote>
+<p><strong>Folder name:</strong> <em>synthpops_input_data</em><br>
+These files are used for defining more specific parameters for synthetic population creator. More info about thouse files you can find on <a href="../exampleE4_1/">T4.1 Population input data</a>.</p>
+</blockquote>
+<h3 id="outputs-folder">Outputs folder<a class="headerlink" href="#outputs-folder" title="Permanent link">#</a></h3>
+<p>This folder contains several outputs from a simulation. The <code>outputs</code> folder can be set as a default folder in <a href="../../Extension_settings#Auto save settings">Auto save settings</a>, or it can be used for manually saved outputs defined in various configuration files. Each simulation output is saved to a new folder with a time stamp in the folder name <code>(YY_mm_DD_HH_MM)</code></p>
+<pre><code class="language-tree">    |
+    +-- outputs
+        |   +-- Output_2023_01_31_24_00
+            |   +-- Configuration   
+            |   +-- output_reports
+            |   +-- pop_configurations
+            |   +-- pops
+            |   +-- sims
+</code></pre>
+<p>Each simulation result folder has its own subdirectories:</p>
+<ul>
+<li><code>Configuration</code> holds all input configuration files used for the simulation.</li>
+<li><code>output_reports</code> contains all generated <code>csv</code> and <code>xlsx</code> outputs defined in the <a href="../../Report_settings/">Report module</a>.</li>
+<li><code>pop_configuration</code> contains configuration files used as inputs in the <a href="../../Synthetic_pop_settings/">Synthetic population module</a> for creating population.</li>
+<li><code>pops</code> holds all generated population objects from <a href="../../Synthetic_pop_settings/#settings-for-population-creator">Synthetic population module</a>. These can be used in <a href="../../Simulation_settings/">Simulation module</a> as <em>popfile</em> key.</li>
+<li><code>sims</code> saves instances of simulations for later analysis and exploration. These are <code>covasim.MultiSim()</code> objects.</li>
+</ul>
+<h3 id="other-individual-files">Other individual files<a class="headerlink" href="#other-individual-files" title="Permanent link">#</a></h3>
+<h4 id="start-file">Start file<a class="headerlink" href="#start-file" title="Permanent link">#</a></h4>
+<p><em>(file: start.sh)</em></p>
+<p>After editing all configuration files, a abmSHARE simulation is started by typing <code>./start.sh</code> in the command line. It is important to be in the located (<code>cd</code>) in the sandbox directory or to insert an absolute path for the <code>start.sh</code> file. 
+If you want to validate the input configuration for the model, run <code>./start.sh -v</code>. The validation process will check for correct input data types and file paths.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../.." class="btn btn-neutral float-left" title="Welcome to abmSHARE documentation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../exampleE2/" class="btn btn-neutral float-right" title="T2 Importing/Exporting data">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../.." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../exampleE2/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../javascripts/mathjax.js" defer></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

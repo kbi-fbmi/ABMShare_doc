@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>T2 Importing/Exporting data - abmSHARE Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "T2 Importing/Exporting data";
+        var mkdocs_page_input_path = "examples\\exampleE2.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> abmSHARE Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              
+                      <p class="caption"><span class="caption-text">About</span></p>
+              
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../..">Welcome to abmSHARE documentation</a>
+                  </li>
+              </ul>
+              
+                      <p class="caption"><span class="caption-text">Tutorials</span></p>
+              
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE1/">T1 Getting Started with abmSHARE</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">T2 Importing/Exporting data</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#what-to-import">What to import</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#what-to-export">What to export</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#how-to-transfer-files">How to transfer files</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#scp">SCP</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#scp-via-winscp">SCP via WinSCP</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#scp-via-terminal">SCP via terminal</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#linux-filezilla">Linux Filezilla</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE3/">T3 Ways for run</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE4/">T4 Creating population</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE4_1/">T4.1 Population input data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE5/">T5 Creating simulation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE5A_1/">T5.1 Simulation - Interventions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE5A_2/">T5.2 Simulation - Intervention types</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE5B/">T5.3 Simulation - Immunity and variants</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE6/">T6 Reporting outputs</a>
+                  </li>
+              </ul>
+              
+                      <p class="caption"><span class="caption-text">Module Configurations Description</span></p>
+              
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Extension_settings/">Main configuration file</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Synthetic_pop_settings/">Synthetic population configuration file</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Simulation_settings/">Simulation configuration file</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Report_settings/">Report module configuration file</a>
+                  </li>
+              </ul>
+              
+                  <ul><li>
+                      <a href="../../Downloads/" style="padding: 0; font-size: inherit; line-height: inherit">
+              
+                      <p class="caption"><span class="caption-text">Downloads</span></p>
+              
+                      </a>
+                  </li></ul>
+              
+              <ul>
+              </ul>
+              
+                  <ul><li>
+                      <a href="../../Parameters/" style="padding: 0; font-size: inherit; line-height: inherit">
+              
+                      <p class="caption"><span class="caption-text">Parameters</span></p>
+              
+                      </a>
+                  </li></ul>
+              
+              <ul>
+              </ul>
+              
+                  <ul><li>
+                      <a href="../../ChangeLog/" style="padding: 0; font-size: inherit; line-height: inherit">
+              
+                      <p class="caption"><span class="caption-text">Change Log</span></p>
+              
+                      </a>
+                  </li></ul>
+              
+              <ul>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">abmSHARE Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Tutorials &raquo;</li>
+      <li>T2 Importing/Exporting data</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="importing-and-exporting-data-from-the-abmshare-server">Importing and exporting data from the abmSHARE server<a class="headerlink" href="#importing-and-exporting-data-from-the-abmshare-server" title="Permanent link">#</a></h1>
+<p>You can import configuration files or export outputs from simulations by downloading/uploading files with an IDE (Integrated Development Environment) or a common file management or file transfer applications.</p>
+<p>Each user with access to the server has a defined <code>&lt;username&gt;</code> folder. There is no need to change the path in the input or output files. All paths are defined automatically.</p>
+<h2 id="what-to-import">What to import<a class="headerlink" href="#what-to-import" title="Permanent link">#</a></h2>
+<p>In your sandbox folders (<code>default /home/&lt;username&gt;/sandbox</code>) there is the <code>input_files</code> directory which contains the input configuration files for the abmSHARE model and for input data used by synthetic population module.</p>
+<p>The main following import path is </p>
+<ul>
+<li>Configuration files path: <code>/home/&lt;username&gt;/sandbox/input_data</code></li>
+</ul>
+<h2 id="what-to-export">What to export<a class="headerlink" href="#what-to-export" title="Permanent link">#</a></h2>
+<p>After running a simulation you can export the output to your local machine. The output files are defined in <a href="../exampleE1/#outputs">Sandbox output folder</a>.</p>
+<h2 id="how-to-transfer-files">How to transfer files<a class="headerlink" href="#how-to-transfer-files" title="Permanent link">#</a></h2>
+<p>There are several ways how to import and export files depending on your system.</p>
+<h3 id="scp">SCP<a class="headerlink" href="#scp" title="Permanent link">#</a></h3>
+<p>For importing or exporting data is reccomended to use the SCP protocol.</p>
+<h4 id="scp-via-winscp">SCP via WinSCP<a class="headerlink" href="#scp-via-winscp" title="Permanent link">#</a></h4>
+<p>For Windows OS you can use <a href="https://winscp.net/">WinSCP</a>. </p>
+<h4 id="scp-via-terminal">SCP via terminal<a class="headerlink" href="#scp-via-terminal" title="Permanent link">#</a></h4>
+<p>For downloading <strong>single file</strong> from the abmSHARE server to your PC (local host) use </p>
+<pre><code class="language-shell">    scp username@&lt;servername&gt;:/path/to/file/on/server /path/on/localhost/to/copy
+</code></pre>
+<p>For downloading <strong>folders</strong>  from the abmSHARE server to your PC (local host) use </p>
+<pre><code class="language-shell">    scp -r username@&lt;servername&gt;:/path/to/folder/on/server /path/on/localhost/to/copy
+</code></pre>
+<p>For uploading <strong>single file</strong> from your PC (local host) to the abmSHARE server use</p>
+<pre><code class="language-shell">    scp /path/on/localhost/to/copy username@&lt;servername&gt;:/path/to/file/on/server
+</code></pre>
+<p>For uploading <strong>folders</strong> from your PC (local host) to the abmSHARE server use</p>
+<pre><code class="language-shell">    scp -r /path/on/localhost/to/copy username@&lt;servername&gt;:/path/to/folder/on/server
+</code></pre>
+<h2 id="linux-filezilla">Linux Filezilla<a class="headerlink" href="#linux-filezilla" title="Permanent link">#</a></h2>
+<p>For data transfer in Linux you can use <a href="https://filezilla-project.org/">Filezilla</a> application.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../exampleE1/" class="btn btn-neutral float-left" title="T1 Getting Started with abmSHARE"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../exampleE3/" class="btn btn-neutral float-right" title="T3 Ways for run">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../exampleE1/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../exampleE3/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../javascripts/mathjax.js" defer></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>T4 Creating population - abmSHARE Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "T4 Creating population";
+        var mkdocs_page_input_path = "examples\\exampleE4.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> abmSHARE Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              
+                      <p class="caption"><span class="caption-text">About</span></p>
+              
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../..">Welcome to abmSHARE documentation</a>
+                  </li>
+              </ul>
+              
+                      <p class="caption"><span class="caption-text">Tutorials</span></p>
+              
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE1/">T1 Getting Started with abmSHARE</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE2/">T2 Importing/Exporting data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE3/">T3 Ways for run</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">T4 Creating population</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#input-data">Input data</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#basic-input-data-for-creating-synthetic-population">Basic input data for creating synthetic population</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#parameters-file-pars_filecsv">Parameters file (pars_file.csv)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#region-pattern-file-synthpops_regioncsv">Region pattern file (synthpops_region.csv)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#additional-input-data-for-creating-synthetic-population">Additional input data for creating synthetic population</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#population-creation">Population creation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#parallel-simulation">Parallel simulation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#full-scale-simulation">Full-scale simulation</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE4_1/">T4.1 Population input data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE5/">T5 Creating simulation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE5A_1/">T5.1 Simulation - Interventions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE5A_2/">T5.2 Simulation - Intervention types</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE5B/">T5.3 Simulation - Immunity and variants</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE6/">T6 Reporting outputs</a>
+                  </li>
+              </ul>
+              
+                      <p class="caption"><span class="caption-text">Module Configurations Description</span></p>
+              
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Extension_settings/">Main configuration file</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Synthetic_pop_settings/">Synthetic population configuration file</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Simulation_settings/">Simulation configuration file</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Report_settings/">Report module configuration file</a>
+                  </li>
+              </ul>
+              
+                  <ul><li>
+                      <a href="../../Downloads/" style="padding: 0; font-size: inherit; line-height: inherit">
+              
+                      <p class="caption"><span class="caption-text">Downloads</span></p>
+              
+                      </a>
+                  </li></ul>
+              
+              <ul>
+              </ul>
+              
+                  <ul><li>
+                      <a href="../../Parameters/" style="padding: 0; font-size: inherit; line-height: inherit">
+              
+                      <p class="caption"><span class="caption-text">Parameters</span></p>
+              
+                      </a>
+                  </li></ul>
+              
+              <ul>
+              </ul>
+              
+                  <ul><li>
+                      <a href="../../ChangeLog/" style="padding: 0; font-size: inherit; line-height: inherit">
+              
+                      <p class="caption"><span class="caption-text">Change Log</span></p>
+              
+                      </a>
+                  </li></ul>
+              
+              <ul>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">abmSHARE Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Tutorials &raquo;</li>
+      <li>T4 Creating population</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="creating-a-population">Creating a Population<a class="headerlink" href="#creating-a-population" title="Permanent link">#</a></h1>
+<p>The Synthetic population module is based on <a href="https://docs.idmod.org/projects/synthpops/">IDM SynthPops</a> available at <a href="https://github.com/InstituteforDiseaseModeling/synthpops">Synthpops</a>, and extends its functionality. There are two submodules responsible for creating population objects usable in the abmSHARE model. Because the population creation process is computationally demanding, there is an option for a parallel run in which each population is created in a separate CPU core.</p>
+<p>All possible configurations are described in the <a href="../../Synthetic_pop_settings/">Synthetic population configuration file</a>.</p>
+<h2 id="input-data">Input data<a class="headerlink" href="#input-data" title="Permanent link">#</a></h2>
+<p>For creating a synthetic population there are two main input data sections. First one is for creating a population based on the necessary input arguments. The second is for creating a more specific population based on additional input data that can reflect region specific population distributions across multiple parameters.</p>
+<h3 id="basic-input-data-for-creating-synthetic-population">Basic input data for creating synthetic population<a class="headerlink" href="#basic-input-data-for-creating-synthetic-population" title="Permanent link">#</a></h3>
+<p>Basic input data consist of </p>
+<ul>
+<li><code>pars_file.csv</code> contains the parameters for the synthetic population. It is used for defining the parameters in the synthetic population module. The file can be downloaded <a href="../../downloads/synthpops_data/pars_file.csv">here</a>.</li>
+<li><code>synthpops_input_files.csv</code> contains the input files for the synthetic population. It is used for defining the input files in the synthetic population module. The file can be downloaded <a href="../../downloads/synthpops_data/synthpops_input_files.csv">here</a>.</li>
+<li><code>synthpops_region.csv</code> contains the region-specific parameters for the synthetic population. It is used for defining the region-specific parameters in the synthetic population module. The file can be downloaded <a href="../../downloads/synthpops_data/synthpops_region.csv">here</a>.</li>
+</ul>
+<h4 id="parameters-file-pars_filecsv">Parameters file (pars_file.csv)<a class="headerlink" href="#parameters-file-pars_filecsv" title="Permanent link">#</a></h4>
+<p>Parameters file is a <code>csv</code> file that contains the parameters for the synthetic population. It is used for defining the parameters in the synthetic population module</p>
+<p>All possible input data are described in the <a href="../../Synthetic_pop_settings/">Synthetic population configuration file</a>. Basically it needs the main <code>.csv</code> or <code>.xlsx</code> configuration file <em>synthpops_configuration</em> file. This files can further contain links to four other parameter files that are described in <a href="../exampleE4_1/#input-data-for-creating-synthetic-population">Synthetic population input_data</a>.</p>
+<p>More info about it can be found in <a href="../../Synthetic_pop_settings/#pop-creator-settings">Synthetic population configuration file</a>.</p>
+<p>Example file structure</p>
+<table>
+<thead>
+<tr>
+<th>location</th>
+<th>household_method</th>
+<th>smooth_ages</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Czechia</td>
+<td>fixed_ages</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Default</td>
+<td>fixed_ages</td>
+<td>1</td>
+</tr>
+<tr>
+<td>CZ01</td>
+<td>fixed_ages</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<h4 id="region-pattern-file-synthpops_regioncsv">Region pattern file (synthpops_region.csv)<a class="headerlink" href="#region-pattern-file-synthpops_regioncsv" title="Permanent link">#</a></h4>
+<p>Region pattern file is a csv file that contains the region-specific parameters for the synthetic population. It is used for defining the region-specific parameters in the synthetic population module and enabling regions to be created.</p>
+<p>All possible input data are described <a href="../../Synthetic_pop_settings/">Synthetic population configuration file</a>. Basically it needs the main .csv or .xlsx configuration file <em>synthpops_region</em> file. This files can further contain links to four other parameter files that are described in <a href="../exampleE4_1/#input-data-for-creating-synthetic-population">Synthetic population input_data</a>.</p>
+<p>More info about it can be found in <a href="../../Synthetic_pop_settings/#population-region-creator-synthpops_regioncsv">Synthetic population configuration file</a>.</p>
+<p>Example file structure</p>
+<table>
+<thead>
+<tr>
+<th>location_code</th>
+<th>use</th>
+<th>region_name</th>
+<th>...</th>
+<th>parent_dirpath</th>
+<th>parent_filename</th>
+<th>parent_filepath</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CZ01</td>
+<td>true</td>
+<td>Czechia_CZ01</td>
+<td>...</td>
+<td></td>
+<td></td>
+<td>path_to/Czechia.json</td>
+</tr>
+<tr>
+<td>CZ02</td>
+<td>true</td>
+<td>Czechia_CZ02</td>
+<td>...</td>
+<td>path_to_parent_dirpath</td>
+<td>Czechia</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="additional-input-data-for-creating-synthetic-population">Additional input data for creating synthetic population<a class="headerlink" href="#additional-input-data-for-creating-synthetic-population" title="Permanent link">#</a></h3>
+<p>Additional input data can be used to specify various attributes such as age distribution, employment rate, enrollment rate, school distributions etc.</p>
+<p>Those data can be on the global level (specified by <code>region_parent_name</code> or default) or on the region level (specified by <code>location_code</code>). If there is a region specific data, it will be used instead of the global data. If there is no region specific data, the global data will be used. <strong>Age distribution file is necessary for creating a synthetic population, otherwise you can specify number of agents in pars_file.csv</strong></p>
+<p>For this approach there is a chapter <a href="../exampleE4_1/">T4.1 Population input data</a> which describes all possible input data for creating synthetic population.</p>
+<h3 id="population-creation">Population creation<a class="headerlink" href="#population-creation" title="Permanent link">#</a></h3>
+<p>Population creation works in two steps. First one is responsible for creating region pattern configuration file and the other one is creating population object based on this region pattern file and based on additional parameters. There are several option to define parameters (in detail its explained in <a href="../../Synthetic_pop_settings/#settings-for-population-creator">Synthetic pop settings</a>). As its mentioned in section above - if there is any new data for integrating into population creation, they will take effect only when population is re-created with those new input data. Output populations are by default saved as the '*.pop' files, which are used in simulation module.</p>
+<h3 id="parallel-simulation">Parallel simulation<a class="headerlink" href="#parallel-simulation" title="Permanent link">#</a></h3>
+<p>There is a option to run this module in sequence or in parallel, which can utilize more than one CPU core and improve the performance. </p>
+<h3 id="full-scale-simulation">Full-scale simulation<a class="headerlink" href="#full-scale-simulation" title="Permanent link">#</a></h3>
+<p>Full run needs to have defined a csv/xlsx files in <a href="../../Synthetic_pop_settings/">Synthetic pop settings</a>. Those files are available to download here:</p>
+<ul>
+<li><a href="../../downloads/synthpops_data/synthpops_region.csv">Synthetic population base region info</a></li>
+<li><a href="../../downloads/synthpops_data/pars_file.csv">Synthetic population parameters file</a></li>
+<li><a href="../../downloads/synthpops_data/synthpops_input_files.csv">Synthetic population aditional input files description file</a></li>
+<li><a href="../../downloads/synthpops_additional_input_data.zip">Synthetic population adfitional input files in zip</a></li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../exampleE3/" class="btn btn-neutral float-left" title="T3 Ways for run"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../exampleE4_1/" class="btn btn-neutral float-right" title="T4.1 Population input data">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../exampleE3/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../exampleE4_1/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../javascripts/mathjax.js" defer></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

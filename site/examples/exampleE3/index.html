@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>T3 Ways for run - abmSHARE Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "T3 Ways for run";
+        var mkdocs_page_input_path = "examples\\exampleE3.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> abmSHARE Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              
+                      <p class="caption"><span class="caption-text">About</span></p>
+              
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../..">Welcome to abmSHARE documentation</a>
+                  </li>
+              </ul>
+              
+                      <p class="caption"><span class="caption-text">Tutorials</span></p>
+              
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE1/">T1 Getting Started with abmSHARE</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE2/">T2 Importing/Exporting data</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">T3 Ways for run</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#geospatial-input-data-system">Geospatial Input Data System</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#a-short-testing-simulation">A short testing simulation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#a-full-scale-simulation">A full scale simulation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#recommended-configuration">Recommended configuration</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#simulating-only-a-specific-module">Simulating only a specific module</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#simulating-a-synthetic-population-module">Simulating a synthetic population module</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#simulation-module">Simulation module</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#to-run-the-report-module">To run the report module</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE4/">T4 Creating population</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE4_1/">T4.1 Population input data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE5/">T5 Creating simulation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE5A_1/">T5.1 Simulation - Interventions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE5A_2/">T5.2 Simulation - Intervention types</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE5B/">T5.3 Simulation - Immunity and variants</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE6/">T6 Reporting outputs</a>
+                  </li>
+              </ul>
+              
+                      <p class="caption"><span class="caption-text">Module Configurations Description</span></p>
+              
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Extension_settings/">Main configuration file</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Synthetic_pop_settings/">Synthetic population configuration file</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Simulation_settings/">Simulation configuration file</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Report_settings/">Report module configuration file</a>
+                  </li>
+              </ul>
+              
+                  <ul><li>
+                      <a href="../../Downloads/" style="padding: 0; font-size: inherit; line-height: inherit">
+              
+                      <p class="caption"><span class="caption-text">Downloads</span></p>
+              
+                      </a>
+                  </li></ul>
+              
+              <ul>
+              </ul>
+              
+                  <ul><li>
+                      <a href="../../Parameters/" style="padding: 0; font-size: inherit; line-height: inherit">
+              
+                      <p class="caption"><span class="caption-text">Parameters</span></p>
+              
+                      </a>
+                  </li></ul>
+              
+              <ul>
+              </ul>
+              
+                  <ul><li>
+                      <a href="../../ChangeLog/" style="padding: 0; font-size: inherit; line-height: inherit">
+              
+                      <p class="caption"><span class="caption-text">Change Log</span></p>
+              
+                      </a>
+                  </li></ul>
+              
+              <ul>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">abmSHARE Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Tutorials &raquo;</li>
+      <li>T3 Ways for run</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="how-to-run-an-abmshare-simulation">How to run an abmSHARE simulation<a class="headerlink" href="#how-to-run-an-abmshare-simulation" title="Permanent link">#</a></h1>
+<p>This chapter contains information about different ways of running an abmSHARE simulation. </p>
+<h2 id="geospatial-input-data-system">Geospatial Input Data System<a class="headerlink" href="#geospatial-input-data-system" title="Permanent link">#</a></h2>
+<p>abmSHARE extends the Covasim model in two important dimensions. First, it can simulate the model across user-specified geographic regions. Second, it can import parameters obtained from external data sources. These parameters determine the behavior of the model in one or more user-specified geographic regions. These regional and parametric specification can be imported in a table format using <code>csv</code> or <code>xlsx</code> files.
+Examples of these input files can be seen and downloaded in the <a href="../../Downloads/">Download</a> section.</p>
+<p><strong>Note:</strong> Do <strong>not</strong> remove non-optional keys from any configuration file or any columns from a csv file from the configuration files. Do <strong>not</strong> rename files. If a file is missing or a column is empty, the model will use default parameters.</p>
+<h2 id="a-short-testing-simulation">A short testing simulation<a class="headerlink" href="#a-short-testing-simulation" title="Permanent link">#</a></h2>
+<p>Since the full abmSHARE model is computationally demanding, it is better to try the model on a small scale, testing simulation.
+For the test, you can/must turn on one or more modules (set to <code>true</code>) with the appropriate configuration files fully configured. Also you have to specify key <code>test</code> to <code>true</code> in the <a href="../../Extension_settings/">Main configuration file</a>. This test run will generate fixes the size of the population to 20,000 (also with mobility). </p>
+<p>In the <code>main_configuration.json</code> file:</p>
+<pre><code class="language-json">&quot;initialize&quot;:
+    {
+        &quot;synthpop_initialize&quot;:true,
+        &quot;simulation_initialize&quot;:true,
+        &quot;report_module_initialize&quot;:true,
+        &quot;test&quot;:true
+    }
+</code></pre>
+<h2 id="a-full-scale-simulation">A full scale simulation<a class="headerlink" href="#a-full-scale-simulation" title="Permanent link">#</a></h2>
+<p>For a full scale simulation turn on the first three modules to <code>true</code> with the appropriate configuration files fully configured. The <code>test</code> atribute is set to <code>false</code> (or can be removed from the configuration file):</p>
+<p>In the <code>main_configuration.json</code> file:</p>
+<pre><code class="language-json">&quot;initialize&quot;:
+    {
+        &quot;synthpop_initialize&quot;:true,
+        &quot;simulation_initialize&quot;:true,
+        &quot;report_module_initialize&quot;:true,
+        &quot;test&quot;:false
+    }
+</code></pre>
+<h2 id="recommended-configuration">Recommended configuration<a class="headerlink" href="#recommended-configuration" title="Permanent link">#</a></h2>
+<p>For the first time, run a synthetic population first or use a pre-generated population from a previous simulation. To use such an existing population, turn the synthetic population module to <code>false</code> and use a pre-generated population for next runs of the Simulation module. In this case, when you already have created population objects (more can be found at <a href="../exampleE4/">T4 Creating population</a>) you need to specify in the <a href="../exampleE5/#region-specific-parameters">Simulation region configuration file</a> values for the key <em>popfile</em> which will hold the full path to the pre-generated population file for specific region. Below is an example of the popfile setting in the region configuration file. This configuration is recommended for faster simulation processing (the same population is not generated in each run).</p>
+<p>In the <code>main_configuration.json</code> file:</p>
+<pre><code class="language-json">&quot;initialize&quot;:
+    {
+        &quot;synthpop_initialize&quot;:false,
+        &quot;simulation_initialize&quot;:true,
+        &quot;report_module_initialize&quot;:true,
+        &quot;test&quot;:false
+    }
+</code></pre>
+<p><strong>Key "popfile" setting in the Simulation module configuration</strong></p>
+<p>In the following example, in the first two regions, CZ01 and CZ02, the model will use already generated populations. For the other regions, new populations will be crated. </p>
+<table>
+<thead>
+<tr>
+<th>location_code</th>
+<th>use</th>
+<th>region_parent_name</th>
+<th>name</th>
+<th>popfile</th>
+<th>pop_infected</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CZ01</td>
+<td>true</td>
+<td>Czechia</td>
+<td>Region1</td>
+<td>/absolute/path/to/popfile0.pop</td>
+<td>2</td>
+</tr>
+<tr>
+<td>CZ02</td>
+<td>true</td>
+<td>Czechia</td>
+<td>Region2</td>
+<td>/absolute/path/to/popfile1.pop</td>
+<td>0</td>
+</tr>
+<tr>
+<td>CZ03</td>
+<td>true</td>
+<td>Czechia</td>
+<td>Region3</td>
+<td></td>
+<td>0</td>
+</tr>
+<tr>
+<td>CZ04</td>
+<td>true</td>
+<td>Czechia</td>
+<td>Region4</td>
+<td></td>
+<td>0</td>
+</tr>
+<tr>
+<td>CZ05</td>
+<td>true</td>
+<td>Czechia</td>
+<td>Region5</td>
+<td></td>
+<td>2</td>
+</tr>
+<tr>
+<td>CZ06</td>
+<td>true</td>
+<td>Czechia</td>
+<td>Region6</td>
+<td></td>
+<td>2</td>
+</tr>
+<tr>
+<td>CZ07</td>
+<td>true</td>
+<td>Czechia</td>
+<td>Region7</td>
+<td></td>
+<td>0</td>
+</tr>
+<tr>
+<td>CZ08</td>
+<td>true</td>
+<td>Czechia</td>
+<td>Region8</td>
+<td></td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<h2 id="simulating-only-a-specific-module">Simulating only a specific module<a class="headerlink" href="#simulating-only-a-specific-module" title="Permanent link">#</a></h2>
+<p>You are not limited to use all modules for every run. This approach is useful when you already have generated populations as above in <a href="./#recommended-configuration">Recommended configuration</a>. Also, you can generate new reports with  <a href="../../Report_settings/">report module</a> after loading files from an already generated simulation. You can also combine those settings for:</p>
+<ul>
+<li>Only Synthetic population module</li>
+<li>Only Simulation module</li>
+<li>Only Report module</li>
+<li>Combination of Synthetic population module + Simulation module</li>
+<li>Combination of Simulation module + Report module</li>
+<li>Full run of all modules</li>
+</ul>
+<h3 id="simulating-a-synthetic-population-module">Simulating a synthetic population module<a class="headerlink" href="#simulating-a-synthetic-population-module" title="Permanent link">#</a></h3>
+<p>For simulating only a synthetic population module, set the value in <a href="../../Extension_settings/">Main configuration file</a> for the key <code>synthpop_initialize</code> to <code>true</code> and other keys to <code>false</code>. In this particular case, you need to specify the path to the <code>main_configuration.json</code> file:</p>
+<pre><code class="language-json">&quot;initialize&quot;: {
+        &quot;synthpop_initialize&quot;: true,
+        &quot;simulation_initialize&quot;: true,
+        &quot;report_module_initialize&quot;: true,
+        &quot;test&quot;:false
+    },
+    &quot;synthpops_settings&quot;: {
+        &quot;filepath&quot;: &quot;&lt;Path_to_sandbox&gt;/input_data/synthpops_configuration.json&quot;
+    }
+</code></pre>
+<h3 id="simulation-module">Simulation module<a class="headerlink" href="#simulation-module" title="Permanent link">#</a></h3>
+<p>For running only the Simulation module, in the <a href="../../Extension_settings/">Main configuration file</a> <code>simulation_initialize</code> to <code>true</code> and other keys to <code>false</code>. Again, the actual path to the configuration file must be provided. As mentioned in <a href="./#recommended-configuration">Recommended configuration</a> you can run only this setup or in a combination with report module for a faster process after the population was created and defined in <a href="../../Simulation_settings/">Simulation module configuration</a>.</p>
+<p>In the <code>main_configuration.json</code> file:</p>
+<pre><code class="language-json">&quot;initialize&quot;:
+    {
+        &quot;synthpop_initialize&quot;:false,
+        &quot;simulation_initialize&quot;:true,
+        &quot;report_module_initialize&quot;:false,
+        &quot;test&quot;:false
+    },
+&quot;simulation_settings&quot;:
+    {
+        &quot;filepath&quot;:&quot;&lt;Path_to_sandbox&gt;/input_data/covasim_configuration.json&quot;
+    }
+</code></pre>
+<h3 id="to-run-the-report-module">To run the report module<a class="headerlink" href="#to-run-the-report-module" title="Permanent link">#</a></h3>
+<p>You can run the report module for an already completed simulation. Set the value in <a href="../../Extension_settings/">Main configuration file</a>  of the key <code>report_module_initialize</code> to <code>true</code> and other keys to <code>false</code> with the actual path to the configuration file key <code>report_settings</code>.</p>
+<p>In the <code>main_configuration.json</code> file:</p>
+<pre><code class="language-json">&quot;initialize&quot;:
+    {
+        &quot;synthpop_initialize&quot;:false,
+        &quot;simulation_initialize&quot;:false,
+        &quot;report_module_initialize&quot;:true,
+        &quot;test&quot;:false
+    },
+&quot;report_settings&quot;:
+    {
+        &quot;filepath&quot;:&quot;&lt;Path_to_sandbox&gt;/input_data/report_configuration.json&quot;
+    }
+</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../exampleE2/" class="btn btn-neutral float-left" title="T2 Importing/Exporting data"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../exampleE4/" class="btn btn-neutral float-right" title="T4 Creating population">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../exampleE2/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../exampleE4/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../javascripts/mathjax.js" defer></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

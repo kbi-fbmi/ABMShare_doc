@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Parameters - abmSHARE Documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Parameters";
+        var mkdocs_page_input_path = "Parameters.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> abmSHARE Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              
+                      <p class="caption"><span class="caption-text">About</span></p>
+              
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Welcome to abmSHARE documentation</a>
+                  </li>
+              </ul>
+              
+                      <p class="caption"><span class="caption-text">Tutorials</span></p>
+              
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../examples/exampleE1/">T1 Getting Started with abmSHARE</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../examples/exampleE2/">T2 Importing/Exporting data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../examples/exampleE3/">T3 Ways for run</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../examples/exampleE4/">T4 Creating population</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../examples/exampleE4_1/">T4.1 Population input data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../examples/exampleE5/">T5 Creating simulation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../examples/exampleE5A_1/">T5.1 Simulation - Interventions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../examples/exampleE5A_2/">T5.2 Simulation - Intervention types</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../examples/exampleE5B/">T5.3 Simulation - Immunity and variants</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../examples/exampleE6/">T6 Reporting outputs</a>
+                  </li>
+              </ul>
+              
+                      <p class="caption"><span class="caption-text">Module Configurations Description</span></p>
+              
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../Extension_settings/">Main configuration file</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Synthetic_pop_settings/">Synthetic population configuration file</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Simulation_settings/">Simulation configuration file</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Report_settings/">Report module configuration file</a>
+                  </li>
+              </ul>
+              
+                  <ul><li>
+                      <a href="../Downloads/" style="padding: 0; font-size: inherit; line-height: inherit">
+              
+                      <p class="caption"><span class="caption-text">Downloads</span></p>
+              
+                      </a>
+                  </li></ul>
+              
+              <ul>
+              </ul>
+              
+                  <ul><li class="current">
+                      <a href="./" style="padding: 0; font-size: inherit; line-height: inherit">
+              
+                      <p class="caption"><span class="caption-text">Parameters</span></p>
+              
+                      </a>
+                  </li></ul>
+              
+              <ul class="current">
+              </ul>
+              
+                  <ul><li>
+                      <a href="../ChangeLog/" style="padding: 0; font-size: inherit; line-height: inherit">
+              
+                      <p class="caption"><span class="caption-text">Change Log</span></p>
+              
+                      </a>
+                  </li></ul>
+              
+              <ul>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">abmSHARE Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>Parameters</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="parameters-for-synthetic-population-module">Parameters for Synthetic population module<a class="headerlink" href="#parameters-for-synthetic-population-module" title="Permanent link">#</a></h1>
+<p>These parameters can be used in <a href="../Synthetic_pop_settings/#settings-for-population-creator">Synthetic population settings</a> in <em>key:pars</em> section. 
+More information can be found at <a href="https://docs.idmod.org/projects/synthpops/">IDM SynthPops</a>.</p>
+<p>Example parameters with default values:</p>
+<ul>
+<li>use_two_group_reduction=True</li>
+<li>average_LTCF_degree=20</li>
+<li>ltcf_staff_age_min=20</li>
+<li>ltcf_staff_age_max=60</li>
+<li>with_school_types=False</li>
+<li>school_mixing_type='random'</li>
+<li>average_class_size=20</li>
+<li>inter_grade_mixing=0.1</li>
+<li>average_student_teacher_ratio=20</li>
+<li>average_teacher_teacher_degree=3</li>
+<li>teacher_age_min=25</li>
+<li>teacher_age_max=75</li>
+<li>with_non_teaching_staff=False</li>
+<li>average_student_all_staff_ratio=15</li>
+<li>average_additional_staff_degree=20</li>
+<li>staff_age_min=20</li>
+<li>staff_age_max=75</li>
+<li>rand_seed=None</li>
+<li>country_location=None</li>
+<li>state_location=None</li>
+<li>location=None</li>
+<li>sheet_name=None</li>
+<li>household_method='infer_ages'</li>
+<li>smooth_ages=False</li>
+<li>window_length=7</li>
+</ul>
+<h1 id="parameters-for-covasim-variants">Parameters for Covasim variants<a class="headerlink" href="#parameters-for-covasim-variants" title="Permanent link">#</a></h1>
+<ul>
+<li>
+<p>name: "wild" #<em>default</em></p>
+<ul>
+<li>rel_beta        = 1.0, # Default values</li>
+<li>rel_symp_prob   = 1.0, # Default values</li>
+<li>rel_severe_prob = 1.0, # Default values</li>
+<li>rel_crit_prob   = 1.0, # Default values</li>
+<li>rel_death_prob  = 1.0, # Default values</li>
+</ul>
+</li>
+<li>
+<p>name: "alpha"</p>
+<ul>
+<li>rel_beta        = 1.67, # Midpoint of the range reported in <a href="https://science.sciencemag.org/content/372/6538/eabg3055">https://science.sciencemag.org/content/372/6538/eabg3055</a>.</li>
+<li>rel_symp_prob   = 1.0,  # Inconclusive evidence on the likelihood of symptom development. See <a href="https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(21)00055-4/fulltext">https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(21)00055-4/fulltext</a>.</li>
+<li>rel_severe_prob = 1.64, # From <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3792894">https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3792894</a>, and consistent with <a href="https://www.eurosurveillance.org/content/10.2807/1560-7917.ES.2021.26.16.2100348">https://www.eurosurveillance.org/content/10.2807/1560-7917.ES.2021.26.16.2100348</a> and <a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/961042/S1095_NERVTAG_update_note_on_B.1.1.7_severity_20210211.pdf">https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/961042/S1095_NERVTAG_update_note_on_B.1.1.7_severity_20210211.pdf</a></li>
+<li>rel_crit_prob   = 1.0,  # Various studies have found increased mortality for B117 (summary here: <a href="https://www.thelancet.com/journals/laninf/article/PIIS1473-3099(21)00201-2/fulltext#tbl1">https://www.thelancet.com/journals/laninf/article/PIIS1473-3099(21)00201-2/fulltext#tbl1</a>), but not necessarily when conditioned on having developed severe disease</li>
+<li>rel_death_prob  = 1.0,  # See comment above</li>
+</ul>
+</li>
+<li>
+<p>name: "beta" </p>
+<ul>
+<li>rel_beta        = 1.0, # No increase in transmissibility; B1351's fitness advantage comes from the reduction in neutralisation</li>
+<li>rel_symp_prob   = 1.0,</li>
+<li>rel_severe_prob = 3.6, # From <a href="https://www.eurosurveillance.org/content/10.2807/1560-7917.ES.2021.26.16.2100348">https://www.eurosurveillance.org/content/10.2807/1560-7917.ES.2021.26.16.2100348</a></li>
+<li>rel_crit_prob   = 1.0,</li>
+<li>rel_death_prob  = 1.0,</li>
+</ul>
+</li>
+<li>
+<p>name: "gamma" </p>
+<ul>
+<li>rel_beta        = 2.05, # Estimated to be 1.7–2.4-fold more transmissible than wild-type: <a href="https://science.sciencemag.org/content/early/2021/04/13/science.abh2644">https://science.sciencemag.org/content/early/2021/04/13/science.abh2644</a></li>
+<li>rel_symp_prob   = 1.0,</li>
+<li>rel_severe_prob = 2.6, # From <a href="https://www.eurosurveillance.org/content/10.2807/1560-7917.ES.2021.26.16.2100348">https://www.eurosurveillance.org/content/10.2807/1560-7917.ES.2021.26.16.2100348</a></li>
+<li>rel_crit_prob   = 1.0,</li>
+<li>rel_death_prob  = 1.0,</li>
+</ul>
+</li>
+<li>
+<p>name: "delta"</p>
+<ul>
+<li>rel_beta        = 2.2, # Estimated to be 1.25-1.6-fold more transmissible than B117: <a href="https://www.researchsquare.com/article/rs-637724/v1">https://www.researchsquare.com/article/rs-637724/v1</a></li>
+<li>rel_symp_prob   = 1.0,</li>
+<li>rel_severe_prob = 3.2, # 2x more transmissible than alpha from <a href="https://mobile.twitter.com/dgurdasani1/status/1403293582279294983">https://mobile.twitter.com/dgurdasani1/status/1403293582279294983</a></li>
+<li>rel_crit_prob   = 1.0,</li>
+<li>rel_death_prob  = 1.0,</li>
+</ul>
+</li>
+</ul>
+<h1 id="parameters-for-simulation">Parameters for simulation<a class="headerlink" href="#parameters-for-simulation" title="Permanent link">#</a></h1>
+<p>All parameters are written as the key for use and possible values. All assigned values are representing default Covasim parameters. Some of those parameters are not implemented and tested yet - look for their description in each section. TO DO: What does this mean? Some parameters do not need to use, because they are already used by another module.</p>
+<h2 id="admissible-parameters-for-global-settings">Admissible parameters for global settings<a class="headerlink" href="#admissible-parameters-for-global-settings" title="Permanent link">#</a></h2>
+<ul>
+<li>use_waning   = True <strong>(bool)</strong> - <strong>(Optional)</strong> Whether to use dynamically calculated immunity. <strong>Must be enabled if there are vaccine intervention</strong></li>
+<li>unique_mobility_indexes = True <strong>(bool)</strong> As from the <em>V0.2.4</em> this must be enabled. Future fix coming.</li>
+<li>start_day = '2020-03-01' <strong>str</strong> - <strong>(Optional)</strong> Date from when the simulation is started. <em>Can be combined as start_day and n_days. Do not need to specify end_day.</em></li>
+<li>n_days = 180 <strong>int</strong> - number of days for simulation</li>
+</ul>
+<h2 id="population-parameters">Population parameters<a class="headerlink" href="#population-parameters" title="Permanent link">#</a></h2>
+<ul>
+<li>pop_size     = (int) e.g. 20000 or 20e3 - Number of agents, <strong>Do not use when there is population object loaded</strong></li>
+<li>pop_infected = (int) 20 - Number of initial infections - <strong>Can be used Globally or separately</strong></li>
+<li>pop_type     = 'random' - What type of population data to use -- 'random' (fastest), 'synthpops' (best), 'hybrid' (compromise) <strong>Don not use when there is population object loaded</strong></li>
+<li>location     = None     - What location to load data from -- default Seattle <strong>Do not use when there is population object loaded</strong></li>
+</ul>
+<h2 id="simulation-parameters">Simulation parameters<a class="headerlink" href="#simulation-parameters" title="Permanent link">#</a></h2>
+<ul>
+<li>start_day  = '2020-03-01' - <strong>(Optional)</strong> Date from when is simulation started. <em>Can be combined as start_day and n_days. Do not need to specify end_day.</em></li>
+<li>end_day    = None <strong>(Datetime (YYYY-MM-DD))</strong>- <strong>(Optional)</strong> End day of the simulation - can be used with <code>start_day</code>. <em>Does not need to be specified when there is start_day and n_days</em></li>
+<li>n_days     = 60 <strong>(int)</strong> - Number of days to run, if <code>end_day</code> is not specified. <em>Simulation can only have n_days and starts with default date and ends after las day from n_days</em> </li>
+<li>rand_seed  = 1 <strong>(int)</strong> - <strong>(Optional)</strong> Random seed, if None, do not reset <em>Simulation is using some random values, use rand_seed for different random seed</em></li>
+<li>verbose    = cvo.verbose  - <strong>(Optional)</strong> Whether or not to display information during the run -- options are 0 (silent), 0.1 (some; default), 1 (default), 2 (everything). <em>It signifanctly slower simulation process</em></li>
+</ul>
+<h2 id="rescaling-parameters">Rescaling parameters<a class="headerlink" href="#rescaling-parameters" title="Permanent link">#</a></h2>
+<p>Rescaling parameters do not need to be used. Some intervention have problem with rescaling (for example, contact tracing).</p>
+<ul>
+<li>pop_scale         = 1 <strong>(int)</strong> -<strong>(Optional)</strong> Factor by which to scale the population -- e.g. <code>pop_scale</code>=10 with <code>pop_size</code>=100e3 means a population of 1 million. <strong>Cannot be used with interventions for contact tracing</strong></li>
+<li>scaled_pop        = None - The total scaled population, i.e. the number of agents times the scale factor <strong>No need for use</strong></li>
+<li>rescale           = True <strong>(bool)</strong> - Enable dynamic rescaling of the population -- starts with <code>pop_scale</code>=1 and scales up dynamically as the epidemic grows. <strong>Use the default, so no need to explicitly specify</strong></li>
+<li>rescale_threshold = 0.05 <strong>(float)</strong> - Fraction susceptible population that will trigger rescaling (if rescaling enabled)</li>
+<li>rescale_factor    = 1.2  <strong>(float</strong>- Factor by which the population is rescaled on each step</li>
+<li>frac_susceptible  = 1.0  <strong>(float)</strong>- What proportion of the population is susceptible to infection</li>
+</ul>
+<h2 id="network-parameters-generally-initialized-after-the-population-has-been-constructed">Network parameters, generally initialized after the population has been constructed<a class="headerlink" href="#network-parameters-generally-initialized-after-the-population-has-been-constructed" title="Permanent link">#</a></h2>
+<p>Because of synthetic pre-generated population there is no need to use Network parameters. For more info look for covasim original documentation.</p>
+<ul>
+<li>contacts        = None  - The number of contacts per layer; set by reset_layer_pars() below</li>
+<li>dynam_layer     = None  - Which layers are dynamic; set by reset_layer_pars() below</li>
+<li>beta_layer      = None  - Transmissibility per layer; set by reset_layer_pars() below</li>
+</ul>
+<h2 id="basic-disease-transmission-parameters">Basic disease transmission parameters<a class="headerlink" href="#basic-disease-transmission-parameters" title="Permanent link">#</a></h2>
+<ul>
+<li>beta_dist    = dict(dist='neg_binomial', par1=1.0, par2=0.45, step=0.01)<strong>(dict)</strong>  - <strong>(Optional)</strong> Distribution to draw individual level transmissibility; dispersion from https://www.researchsquare.com/article/rs-29548/v1</li>
+<li>viral_dist   = dict(frac_time=0.3, load_ratio=2, high_cap=4) <strong>(dict)</strong> - <strong>(Optional)</strong> The time varying viral load (transmissibility); estimated from Lescure 2020, Lancet, https://doi.org/10.1016/S1473-3099(20)30200-0</li>
+<li>beta         = 0.016 <strong>(float)</strong>  - <strong>(Optional)</strong> Beta per symptomatic contact; absolute value, calibrated</li>
+<li>asymp_factor = 1.0  <strong>(float)</strong> - <strong>(Optional)</strong>  Multiply beta by this factor for asymptomatic cases; no statistically significant difference in transmissibility: https://www.sciencedirect.com/science/article/pii/S1201971220302502</li>
+</ul>
+<h2 id="parameters-used-to-calculate-immunity">Parameters used to calculate immunity<a class="headerlink" href="#parameters-used-to-calculate-immunity" title="Permanent link">#</a></h2>
+<p>Parameters defined as dict are not tested in current version. Its recommended to use only <em>use_waning, trans_redux, nab_boost</em> parameter from this section.  </p>
+<ul>
+<li>use_waning   = True <strong>(bool)</strong> - <strong>(Optional)</strong> Whether to use dynamically calculated immunity. <strong>Must be enabled if there are vaccine intervention</strong></li>
+<li>nab_init     = dict(dist='normal', par1=0, par2=2) <strong>  - </strong>(Optional)** Parameters for the distribution of the initial level of log2(nab) following natural infection, taken from fig1b of https://doi.org/10.1101/2021.03.09.21252641</li>
+<li>nab_decay    = dict(form='nab_growth_decay', growth_time=21, decay_rate1=np.log(2) / 50, decay_time1=150, decay_rate2=np.log(2) / 250, decay_time2=365)<strong>(dict)</strong>  <strong>(Optional)</strong> </li>
+<li>nab_kin      = None - <strong>(Optional)</strong>  Constructed during sim initialization using the nab_decay parameters</li>
+<li>nab_boost    = 1.5 - <strong>(Optional)</strong>  Multiplicative factor applied to a person's nab levels if they get reinfected. No data on this, assumption.</li>
+<li>nab_eff      = dict(alpha_inf=1.08, alpha_inf_diff=1.812, beta_inf=0.967, alpha_symp_inf=-0.739, beta_symp_inf=0.038, alpha_sev_symp=-0.014, beta_sev_symp=0.079)<strong>(dict)</strong>  - <strong>(Optional)</strong>  Parameters to map nabs to efficacy</li>
+<li>rel_imm_symp = dict(asymp=0.85, mild=1, severe=1.5)<strong>(dict)</strong>  -<strong>(Optional)</strong>  Relative immunity from natural infection varies by symptoms. Assumption.</li>
+<li>immunity     = None  - <strong>(Optional)</strong> Matrix of immunity and cross-immunity factors, set by init_immunity() in immunity.py</li>
+<li>trans_redux  = 0.59  - <strong>(Optional)</strong>  Reduction in transmission for breakthrough infections, https://www.medrxiv.org/content/10.1101/2021.07.13.21260393v</li>
+</ul>
+<h2 id="variant-specific-disease-transmission-parameters">Variant-specific disease transmission parameters.<a class="headerlink" href="#variant-specific-disease-transmission-parameters" title="Permanent link">#</a></h2>
+<p>When there are multiple variants from <a href="../examples/exampleE5B/">T5.2 Simulation - Variants</a> then there is no need to use those parameters.</p>
+<ul>
+<li>rel_beta        = 1.0 ## Relative transmissibility varies by variant</li>
+</ul>
+<h2 id="duration-parameters-time-for-disease-progression">Duration parameters: time for disease progression<a class="headerlink" href="#duration-parameters-time-for-disease-progression" title="Permanent link">#</a></h2>
+<blockquote>
+<p><strong>Duration parameters are not implemented yet</strong></p>
+</blockquote>
+<ul>
+<li>dur['exp2inf  = dict(dist='lognormal_int', par1=4.5, par2=1.5) # Duration from exposed to infectious; see Lauer et al., https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7081172/, appendix table S2, subtracting - inf2sym duration</li>
+<li>dur['inf2sym  = dict(dist='lognormal_int', par1=1.1, par2=0.9) # Duration from infectious to symptomatic; see Linton et al., https://doi.org/10.3390/jcm9020538, from Table 2, 5.6 day incubation period - 4.5 day exp2inf from Lauer et al.</li>
+<li>dur['sym2sev  = dict(dist='lognormal_int', par1=6.6, par2=4.9) # Duration from symptomatic to severe symptoms; see Linton et al., https://doi.org/10.3390/jcm9020538, from Table 2, 6.6 day onset to hospital admission (deceased); see also Wang et al., https://jamanetwork.com/journals/jama/fullarticle/2761044, 7 days (Table 1)</li>
+<li>dur['sev2crit = dict(dist='lognormal_int', par1=1.5, par2=2.0) # Duration from severe symptoms to requiring ICU; average of 1.9 and 1.0; see Chen et al., https://www.sciencedirect.com/science/article/pii/S0163445320301195, 8.5 days total - 6.6 days sym2sev = 1.9 days; see also Wang et al., https://jamanetwork.com/journals/jama/fullarticle/2761044, Table 3, 1 day, IQR 0-3 days; std=2.0 is an estimate</li>
+</ul>
+<h2 id="duration-parameters-time-for-disease-recovery">Duration parameters: time for disease recovery<a class="headerlink" href="#duration-parameters-time-for-disease-recovery" title="Permanent link">#</a></h2>
+<blockquote>
+<p><strong>Duration parameters are not implemented yet</strong></p>
+</blockquote>
+<ul>
+<li>dur['asym2rec = dict(dist='lognormal_int', par1=8.0,  par2=2.0) # Duration for asymptomatic people to recover; see Wölfel et al., https://www.nature.com/articles/s41586-020-2196-x</li>
+<li>dur['mild2rec = dict(dist='lognormal_int', par1=8.0,  par2=2.0) # Duration for people with mild symptoms to recover; see Wölfel et al., https://www.nature.com/articles/s41586-020-2196-x</li>
+<li>dur['sev2rec  = dict(dist='lognormal_int', par1=18.1, par2=6.3) # Duration for people with severe symptoms to recover, 24.7 days total; see Verity et al., https://www.thelancet.com/journals/laninf/article/PIIS1473-3099(20)30243-7/fulltext; 18.1 days = 24.7 onset-to-recovery - 6.6 sym2sev; 6.3 = 0.35 coefficient of variation * 18.1; see also https://doi.org/10.1017/S0950268820001259 (22 days) and https://doi.org/10.3390/ijerph17207560 (3-10 days)</li>
+<li>dur['crit2rec = dict(dist='lognormal_int', par1=18.1, par2=6.3) # Duration for people with critical symptoms to recover; as above (Verity et al.)</li>
+<li>dur['crit2die = dict(dist='lognormal_int', par1=10.7, par2=4.8) # Duration from critical symptoms to death, 18.8 days total; see Verity et al., https://www.thelancet.com/journals/laninf/article/PIIS1473-3099(20)30243-7/fulltext; 10.7 = 18.8 onset-to-death - 6.6 sym2sev - 1.5 sev2crit; 4.8 = 0.45 coefficient of variation * 10.7</li>
+</ul>
+<h2 id="severity-parameters-probabilities-of-symptom-progression">Severity parameters: probabilities of symptom progression<a class="headerlink" href="#severity-parameters-probabilities-of-symptom-progression" title="Permanent link">#</a></h2>
+<ul>
+<li>rel_symp_prob   = 1.0  <strong>(float)</strong> - <strong>(Optional)</strong> Scale factor for proportion of symptomatic cases</li>
+<li>rel_severe_prob = 1.0  <strong>(float)</strong> - <strong>(Optional)</strong> Scale factor for proportion of symptomatic cases that become severe</li>
+<li>rel_crit_prob   = 1.0  <strong>(float)</strong> - <strong>(Optional)</strong> Scale factor for proportion of severe cases that become critical</li>
+<li>rel_death_prob  = 1.0  <strong>(float)</strong> - <strong>(Optional)</strong> Scale factor for proportion of critical cases that result in death</li>
+<li>prog_by_age     = prog_by_age <em>or</em> False <strong>(str/bool)</strong> - Whether to set or not disease progression based on the person's age.</li>
+<li>prognoses       = None <strong>(float)</strong> - <strong>(Optional)</strong> The actual arrays of prognoses by age; this is populated later</li>
+</ul>
+<h2 id="efficacy-of-protection-measures">Efficacy of protection measures<a class="headerlink" href="#efficacy-of-protection-measures" title="Permanent link">#</a></h2>
+<ul>
+<li>iso_factor   = None <strong>(float)</strong> - <strong>(Optional)</strong> Multiply beta by this factor for diagnosed cases to represent isolation</li>
+<li>quar_factor  = None <strong>(float)</strong> - <strong>(Optional)</strong> Quarantine multiplier on transmissibility and susceptibility</li>
+<li>quar_period  = 14  <strong>(int)</strong> - <strong>(Optional)</strong> Number of days to quarantine for; assumption based on standard policies</li>
+</ul>
+<h1 id="intervention-parameters">Intervention parameters<a class="headerlink" href="#intervention-parameters" title="Permanent link">#</a></h1>
+<h2 id="parameters-for-mobility-intervention">Parameters for mobility intervention<a class="headerlink" href="#parameters-for-mobility-intervention" title="Permanent link">#</a></h2>
+<ul>
+<li>location_code <strong>(str)</strong> = location code of region</li>
+<li>use <strong>(bool)</strong> = True # Default value for use is <strong>True</strong>. If you want to disable this intervention, set it to <strong>False</strong></li>
+<li>intervention_type <strong>(str)</strong> = "mobility_change" # Default value for type is <strong>mobility_change</strong>.  iNo other value allowed.</li>
+<li>label <strong>(str)</strong> = "Some label" # <strong>Optional</strong> Label for this mobility change eg. "Region1 lockdown"</li>
+<li>start_day <strong>(str in YYYY-MM-DD)/ int as number of day</strong> = "2021-03-16"/ 16 Specifies day of the intervention start</li>
+<li>end_day <strong>(str in YYYY-MM-DD)int as number of day</strong> = "2021-03-16"/ 16 Specifies day of the intervention end</li>
+<li>num_days <strong>(int/list of ints)</strong> = can be specified for starting/ending day. Usage as list or integer: [10,25] or 10</li>
+</ul>
+<h2 id="parameters-for-changing-beta-intervention">Parameters for changing beta intervention<a class="headerlink" href="#parameters-for-changing-beta-intervention" title="Permanent link">#</a></h2>
+<ul>
+<li>location_code <strong>(str)</strong> = location code of region</li>
+<li>use <strong>(bool)</strong> = True # Default value for use is <strong>True</strong>. If you want to disable this intervention, set it to <strong>False</strong></li>
+<li>intervention_type <strong>(str)</strong> = "beta_change" # Default value for type is <strong>beta_change</strong>. No other value allowed.</li>
+<li>label <strong>(str)</strong> = "Some label" # <strong>Optional</strong>Label for this mobility change eg. "School lockdown"</li>
+<li>start_day <strong>(str in YYYY-MM-DD)</strong> = "2021-03-16" # Specifies day of the intervention start</li>
+<li>end_day <strong>(str in YYYY-MM-DD)</strong> = "2021-03-16" # Specifies day of the intervention end</li>
+<li>num_days <strong>(int/list of ints)</strong> = can be specified for starting/ending day. Usage as list or integer: [10,25] or 10 <code>"days":[1,30]</code> - which will set starting day as 1st day of simulation and it will end the 30th day of simulation. Or can be used as start day only <code>"days":10</code> - intervention will start the 10th day of simulation.</li>
+<li>beta_change <strong>(float/float list)</strong> = change overall beta (transmission) parameter. Can be used as single value <code>"beta_change":0.6</code> and after intervention ends it will go back to 1.0. Or can be used as list <code>"beta_change":[0.6,0.8]</code> and after intervention ends the value will be se to 0.8</li>
+<li>layers <strong>list of str</strong> = change can be applied to one or more layers. You can use it only for school <code>"layers":['s']</code> or for more layers e.g. workplaces <code>"layers":['s','w']</code></li>
+</ul>
+<h2 id="parameters-for-contact-isolation">Parameters for contact isolation<a class="headerlink" href="#parameters-for-contact-isolation" title="Permanent link">#</a></h2>
+<ul>
+<li>location_code <strong>(str)</strong> = location code of region</li>
+<li>use <strong>(bool)</strong> = True # Default value for use is <strong>True</strong>. If you want to disable this intervention, set it to <strong>False</strong></li>
+<li>intervention_type <strong>(str)</strong> = "isolate_contacts" # Default value for type is <strong>isolate_contacts</strong>. No other value allowed.</li>
+<li>label <strong>(str)</strong> = "Some label"  <strong>Optional</strong> # Label for this mobility change eg. "School contact isolation"</li>
+<li>num_days <strong>(int/list of ints)</strong> = can be specified for starting/ending day. Usage as list or integer: [10,25] or 10<code>"days":"[1,30]"</code> - which will set starting day as 1st day of simulation and it will end the 30th day of simulation. Or can be used as start day only <code>"days":10</code> - intervention will start the 10th day of simulation.</li>
+<li>changes <strong>(float/float list)</strong> = change overall contacts by given number (0.3 == - 30% of contacts). Can be used as single value <code>"changes":0.6</code> and after intervention ends it will go back to 1.0. Or can be used as list <code>"changes":"[0.6,0.8]"</code> and after intervention ends the value will be se to 0.8</li>
+<li>layers <strong>list of str</strong> = change can be applied to one or more layers. You can use it only for school <code>"layers":"['s']"</code> or for more layers e.g. workplaces <code>"layers":"['s','w']"</code></li>
+<li>start_day <strong>(str in YYYY-MM-DD)</strong> = "2021-03-16" # Specifies day of the intervention start</li>
+<li>end_day <strong>(str in YYYY-MM-DD)</strong> = "2021-03-16" # Specifies day of the intervention end</li>
+</ul>
+<h2 id="parameters-for-daily-testing">Parameters for daily testing<a class="headerlink" href="#parameters-for-daily-testing" title="Permanent link">#</a></h2>
+<blockquote>
+<p>There is a plenty of key:values which are optional. Basically its necessary to define daily_test and type of intervention. Everything else is optional and be loaded as default parameters, if none provided. (Default parameters are written on every key = default_value). <strong>Note: do not use dict value specific keys, this is not tested yet e.g. <em>key:subtarget</em></strong></p>
+</blockquote>
+<ul>
+<li>location_code <strong>(str)</strong> = location code of region</li>
+<li>use <strong>(bool)</strong> = True # Default value for use is <strong>True</strong>. If you want to disable this intervention, set it to <strong>False</strong></li>
+<li>intervention_type <strong>(str)</strong> = "per_day_testing" # Default value for type is <strong>per_day_testing</strong>. No other value allowed.</li>
+<li>label <strong>(str)</strong> = "Some label"  <strong>Optional</strong> # Label for this mobility change eg. "School contact isolation"</li>
+<li>daily_tests <strong>(int/int list)</strong>  = number of tests per day, can be int, array, or dataframe/series; if integer, use - that number every day</li>
+<li>symp_test   <strong>(float)</strong> = 100.0 <strong>Optional</strong>odds ratio of a symptomatic person testing (default: 100x more likely)</li>
+<li>quar_test   <strong>(float)</strong>= 1.0 <strong>Optional</strong>probability of a person in quarantine testing (default: no more likely)</li>
+<li>quar_policy <strong>(str)</strong>  = None <strong>Optional</strong>policy for testing in quarantine: options are 'start' (default), 'end', 'both' (start and end), 'daily'; can also be a number or a function, see get_quar_inds()</li>
+<li>subtarget   <strong>(dict)</strong> = None <strong>Optional</strong>subtarget intervention to people with particular indices (format: {'ind': array of indices, or function to return indices from the sim, 'vals': value(s) to apply} <strong>NOT IMPLEMENTED YET</strong></li>
+<li>ili_prev    <strong>(arr)</strong>  = None <strong>Optional</strong>prevalence of influenza-like-illness symptoms in the population; can be float, array, or dataframe/series</li>
+<li>sensitivity <strong>(float)</strong>= 1.0 <strong>Optional</strong>test sensitivity (default 100%, i.e. no false negatives)</li>
+<li>loss_prob   <strong>(float)</strong>= 0 <strong>Optional</strong>probability of the person being lost-to-follow-up (default 0%, i.e. no one lost to follow-up)</li>
+<li>test_delay  <strong>(int)</strong>  = 0 <strong>Optional</strong>days for test result to be known (default 0, i.e. results available instantly)</li>
+<li>start_day   <strong>(int)</strong>  = 0 <strong>Optional</strong>day the intervention starts (default: 0, i.e. first day of the simulation)</li>
+<li>end_day     <strong>(int)</strong>  = None <strong>Optional</strong>day the intervention ends</li>
+<li>num_days <strong>(int/list of ints)</strong> = can be specified for starting/ending day. Usage as list or integer: [10,25] or 10</li>
+</ul>
+<h2 id="parameters-for-testing-probability">Parameters for testing probability<a class="headerlink" href="#parameters-for-testing-probability" title="Permanent link">#</a></h2>
+<p>There is a plenty of <code>key:values</code> which are optional. Basically its necessary to define <code>daily_test</code> and type of intervention. Everything else is optional and be loaded as default parameters, if none provided. (Default parameters are written on every key = default_value). <strong>Note: do not use dict value specific keys, this is not tested yet e.g. <em>key:subtarget</em> </strong></p>
+<ul>
+<li>location_code <strong>(str)</strong> = location code of region</li>
+<li>use <strong>(bool)</strong> = True # Default value for use is <strong>True</strong>. If you want to disable this intervention, set it to <strong>False</strong></li>
+<li>intervention_type <strong>(str)</strong>= "testing_probability" # Default value for type is <strong>testing_probability</strong>. No other value allowed.</li>
+<li>label <strong>(str)</strong> = "Some label"  <strong>Optional</strong> # Label for this mobility change eg. "School contact isolation"</li>
+<li>symp_prob        <strong>(float)</strong>    = 0.1 probability of testing a symptomatic (unquarantined) person</li>
+<li>asymp_prob       <strong>(float)</strong>    = 0.0 <strong>Optional</strong> probability of testing an asymptomatic (unquarantined) person (default: 0)</li>
+<li>symp_quar_prob   <strong>(float)</strong>    = None <strong>Optional</strong> probability of testing a symptomatic quarantined person (default: same as <code>symp_prob</code>)</li>
+<li>asymp_quar_prob  <strong>(float)</strong>    = None <strong>Optional</strong> probability of testing an asymptomatic quarantined person (default: same as <code>asymp_prob</code>)</li>
+<li>quar_policy      <strong>(str)</strong>      = None <strong>Optional</strong> policy for testing in quarantine: options are 'start' (default), 'end', 'both' (start and end), 'daily'; can also be a number or a function, see get_quar_inds()</li>
+<li>subtarget        <strong>(dict)</strong>     = None <strong>Optional</strong> subtarget intervention to people with particular indices  (see test_num() for details) <strong>NOT IMPLEMENTED YET</strong></li>
+<li>ili_prev         <strong>(float/float list)</strong> = None <strong>Optional</strong> prevalence of influenza-like-illness symptoms in the population; can be float, array, or dataframe/series</li>
+<li>sensitivity      <strong>(float)</strong>    = 1.0 <strong>Optional</strong> test sensitivity (default 100%, i.e. no false negatives)</li>
+<li>loss_prob        <strong>(float)</strong>    = 0.0 <strong>Optional</strong> probability of the person being lost-to-follow-up (default 0%, i.e. no one lost to follow-up)</li>
+<li>test_delay       <strong>(int)</strong>      = 0 <strong>Optional</strong> days for test result to be known (default 0, i.e. results available instantly)</li>
+<li>start_day        <strong>(int)</strong>      = 0 <strong>Optional</strong> day the intervention starts (default: 0, i.e. first day of the simulation)</li>
+<li>end_day          <strong>(int)</strong>      = None <strong>Optional</strong> day the intervention ends (default: no end)</li>
+<li>num_days <strong>(int/list of ints)</strong> = can be specified for starting/ending day. Usage as list or integer: [10,25] or 10</li>
+</ul>
+<h2 id="parameters-for-contact-tracing">Parameters for contact tracing<a class="headerlink" href="#parameters-for-contact-tracing" title="Permanent link">#</a></h2>
+<p>There is a plenty of <code>key:values</code> which are optional. Basically it is necessary to define <code>daily_test</code> and type of intervention. Everything else is optional and be loaded as default parameters, if none provided. (Default parameters are written on every key = default_value). <strong>Note: do not use dict value specific keys, this is not tested yet e.g. <em>keys: trace_probs and trace_time otherwise use them only as single float value</em> </strong></p>
+<ul>
+<li>location_code <strong>(str)</strong> = location code of region</li>
+<li>use <strong>(bool)</strong> = True # Default value for use is <strong>True</strong>. If you want to disable this intervention, set it to <strong>False</strong></li>
+<li>intervention_type <strong>(str)</strong><em> = "contact_tracing" # Default value for type is </em><em>contact_tracing</em>*. No other value allowed.</li>
+<li>label <strong>(str)</strong> = "Some label"  <strong>Optional</strong> # Label for this mobility change eg. "School contact isolation"</li>
+<li>trace_probs <strong>(float/dict)</strong>=0.4 <strong>Optional</strong> probability of tracing, per layer (default=100%, i.e. everyone is traced) <strong>NOT IMPLEMENTED YET</strong></li>
+<li>trace_time  <strong>(float/dict)</strong>=0 <strong>Optional</strong> days required to trace, per layer (default=0, i.e. no delay) <strong>NOT IMPLEMENTED YET</strong></li>
+<li>start_day   <strong>(int)</strong>=0       <strong>Optional</strong> intervention start day (default=0, i.e. the start of the simulation)</li>
+<li>end_day     <strong>(int)</strong>=None       <strong>Optional</strong> intervention end day (default=no end)</li>
+<li>presumptive <strong>(bool)</strong>=false      <strong>Optional</strong> whether or not to begin isolation and contact tracing on the presumption of a positive diagnosis (default=no)</li>
+<li>capacity    <strong>(int)</strong>=None       <strong>Optional</strong> optionally specify a maximum number of newly diagnosed people to trace each day</li>
+<li>quar_period <strong>(int)</strong>=None       <strong>Optional</strong> number of days to quarantine when notified as a known contact.</li>
+<li>num_days <strong>(int/list of ints)</strong> = can be specified for starting/ending day. Usage as list or integer: [10,25] or 10</li>
+</ul>
+<h2 id="parameters-for-simple-vaccination">Parameters for simple vaccination<a class="headerlink" href="#parameters-for-simple-vaccination" title="Permanent link">#</a></h2>
+<p>There are a few keys to define this intervention. Use waning immunity must be enabled.</p>
+<ul>
+<li>location_code <strong>(str)</strong> = location code of region</li>
+<li>use <strong>(bool)</strong> = True # Default value for use is <strong>True</strong>. If you want to disable this intervention, set it to <strong>False</strong></li>
+<li>intervention_type <strong>(str)</strong> = "simple_vaccination" # Default value for type is <strong>vaccine</strong>. No other value allowed.</li>
+<li>label <strong>(str)</strong> = "Some label"  <strong>Optional</strong> # Label for this mobility change eg. "School contact isolation"</li>
+<li>start_day <strong>(int)</strong> = 0       <strong>Optional</strong> intervention start day (default=0, i.e. the start of the simulation)</li>
+<li>end_day <strong>(int)</strong> = None       <strong>Optional</strong> intervention end day (default=no end)</li>
+<li>num_days <strong>(int/list of ints)</strong> = can be specified for starting/ending day. Usage as list or integer: [10,25] or 10</li>
+<li>prob <strong>(float)</strong> = 0.0       <strong>Optional</strong> probability of being vaccinated each day (default=0, i.e. no one is vaccinated)</li>
+<li>rel_sus <strong>(float)</strong> = 0.0       <strong>Optional</strong> relative susceptibility of vaccinated people (0 = perfect, 1 = no effect)</li>
+<li>rel_symp <strong>(float)</strong> = 0.0       <strong>Optional</strong> relative symptomaticity of vaccinated people (0 = perfect, 1 = no effect)</li>
+<li>cumulative <strong>(bool)</strong> = False       <strong>Optional</strong> whether cumulative doses have cumulative effects (default false);</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../Downloads/" class="btn btn-neutral float-left" title="Downloads"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../ChangeLog/" class="btn btn-neutral float-right" title="Change Log">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../Downloads/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../ChangeLog/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../javascripts/mathjax.js" defer></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

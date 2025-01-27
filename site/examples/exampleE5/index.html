@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>T5 Creating simulation - abmSHARE Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "T5 Creating simulation";
+        var mkdocs_page_input_path = "examples\\exampleE5.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> abmSHARE Documentation
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              
+                      <p class="caption"><span class="caption-text">About</span></p>
+              
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../..">Welcome to abmSHARE documentation</a>
+                  </li>
+              </ul>
+              
+                      <p class="caption"><span class="caption-text">Tutorials</span></p>
+              
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE1/">T1 Getting Started with abmSHARE</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE2/">T2 Importing/Exporting data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE3/">T3 Ways for run</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE4/">T4 Creating population</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE4_1/">T4.1 Population input data</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">T5 Creating simulation</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#how-it-works">How it works</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#core-features">Core features</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#parameters">Parameters</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#global-parameters">Global parameters</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#region-specific-parameters">Region-specific parameters</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#how-to-run-a-simulation">How to run a simulation</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#complex-run-with-a-synthetic-population">Complex run with a synthetic population</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#complex-run-without-synthetic-population-run">Complex run without synthetic population run</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE5A_1/">T5.1 Simulation - Interventions</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE5A_2/">T5.2 Simulation - Intervention types</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE5B/">T5.3 Simulation - Immunity and variants</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../exampleE6/">T6 Reporting outputs</a>
+                  </li>
+              </ul>
+              
+                      <p class="caption"><span class="caption-text">Module Configurations Description</span></p>
+              
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Extension_settings/">Main configuration file</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Synthetic_pop_settings/">Synthetic population configuration file</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Simulation_settings/">Simulation configuration file</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Report_settings/">Report module configuration file</a>
+                  </li>
+              </ul>
+              
+                  <ul><li>
+                      <a href="../../Downloads/" style="padding: 0; font-size: inherit; line-height: inherit">
+              
+                      <p class="caption"><span class="caption-text">Downloads</span></p>
+              
+                      </a>
+                  </li></ul>
+              
+              <ul>
+              </ul>
+              
+                  <ul><li>
+                      <a href="../../Parameters/" style="padding: 0; font-size: inherit; line-height: inherit">
+              
+                      <p class="caption"><span class="caption-text">Parameters</span></p>
+              
+                      </a>
+                  </li></ul>
+              
+              <ul>
+              </ul>
+              
+                  <ul><li>
+                      <a href="../../ChangeLog/" style="padding: 0; font-size: inherit; line-height: inherit">
+              
+                      <p class="caption"><span class="caption-text">Change Log</span></p>
+              
+                      </a>
+                  </li></ul>
+              
+              <ul>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">abmSHARE Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Tutorials &raquo;</li>
+      <li>T5 Creating simulation</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="creating-a-simulation">Creating a Simulation<a class="headerlink" href="#creating-a-simulation" title="Permanent link">#</a></h1>
+<h2 id="how-it-works">How it works<a class="headerlink" href="#how-it-works" title="Permanent link">#</a></h2>
+<p>The simulation module is based on the Covasim model developed by the <a href="https://idmod.org/">Institute for Disease Modeling</a> available at <a href="https://github.com/InstituteforDiseaseModeling/covasim">https://github.com/InstituteforDiseaseModeling/covasim</a> and extends its functionality without changing the core model. This module is invoked by enabling the option <em>key:simulation_initialize</em> in the <a href="../../Extension_settings/">Main configuration settings</a> and defined by its own configuration settings, which are in detail described at <a href="../../Simulation_settings/">Simulation module configuration</a>. </p>
+<p><strong>Example configuration and input files for download</strong></p>
+<ul>
+<li><a href="/default_confs/simulation_configuration.json" download="simulation_configuration.json">Configuration file for simulation module</a></li>
+<li><a href="../../downloads/simulation_data/simulation_global_pars.csv">Global parameters csv file</a></li>
+<li><a href="../../downloads/simulation_data/simulation_region_pars.csv">Region parameters csv file</a></li>
+<li><a href="../../downloads/simulation_data/simulation_interventions.csv">Intervention parameters csv file</a></li>
+<li><a href="../../downloads/simulation_data/simulation_variants.csv">Variants parameters csv file</a></li>
+</ul>
+<p>All possible configurations for this module are in <a href="../../Simulation_settings/">Simulation module configuration</a>.</p>
+<h3 id="core-features">Core features<a class="headerlink" href="#core-features" title="Permanent link">#</a></h3>
+<ul>
+<li><strong>Running a simulation</strong></li>
+</ul>
+<p>The main purpose of the abmSHARE model is to run a simulation of the Covasim model across several geographic regions specified in the input data. For example, you can run it in one country (Czechia with 8 NUTS 2 regions) or in Europe with <em>N</em> countries. Each region can be defined separately in terms of its own parameters (see <a href="./#different-parameters">Different parameters</a>) or all or some regions can share some or all parameters (see <a href="./#global-parameters">Global parameters</a>). Also you can combine some of the global parameters and include different parameters for only some regions. Of course, the model allows for a simulation of a single region or one country.</p>
+<ul>
+<li><strong>Mobility</strong></li>
+</ul>
+<p>The abmSHARE model allows for the possibility of allowing a number of agents travelling across regions in multisim. This enables the user to track how the illness is spreading across regions during the simulation. An example of the mobility dataset can be downloaded from a <a href="../../Downloads/">Download page</a>. When the mobility feature is turned on and you want to use a pregenerated synthetic population object, you have to use <strong>pregenerated synthethic population which includes mobility</strong> described in <a href="../exampleE4/">T4 Creating population</a> and <a href="../../Synthetic_pop_settings/">Synthetic population module</a>. You cannot run simulation with mobility feature and use pregenerated synthetic population object without the mobility feature.</p>
+<p>The mobility feature works such that a number of agents who travel across regions are added to that region where their mobility is specified so that they have connection in both regions. After every simulation step they are synchronized; therefore, they can spread the infection in home region as well as in other region.</p>
+<ul>
+<li><strong>Interventions</strong></li>
+</ul>
+<p>Interventions represent a feature for defining an intervention into the model at a specific day of simulation. For now there are two ways for defining intervention. They can be defined globally for all regions, or differently for a subset of regions.</p>
+<p>One new intervention was introduced based on new mobility feature:</p>
+<ul>
+<li>You can specify a quarantine for one or more regions by disabling mobility from and to the selected region(s) for a given time period (date from - date to). </li>
+</ul>
+<p>Please see more for interventions in <a href="../exampleE5A_1/">T5.1 Simulation Interventions</a>.</p>
+<ul>
+<li><strong>Disease variants</strong></li>
+</ul>
+<p>Variants can be used with the default settings of the simulation module described in <a href="../../Parameters/#parameters-for-covasim-variants">Parameters original simulation variants</a>. Users can redefine and add their own variants according to <a href="../exampleE5B/">T5.3 Simulation - Immunity and variants</a>.</p>
+<p>In multisimulation, a user can include the original Covasim disease variants described in <a href="../../Parameters/#parameters-for-covasim-variants">Parameters original simulation variants</a> and update its parameters on your own. Variants can be defined globally for each region of the multisimulation or differently for each subset of regions.</p>
+<p>Variants must be defined in its own file in the simulation configuration file.</p>
+<pre><code class="language-json">  &quot;variants&quot;: {
+    &quot;filepath&quot;: &quot;/home/user/sandbox/input_data/simulation_configuration_files/simulation_variants.csv&quot;
+  },
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>location_code</th>
+<th>variant</th>
+<th>use</th>
+<th>label</th>
+<th>days</th>
+<th>start_day</th>
+<th>end_day</th>
+<th>num_days</th>
+<th>number_of_imports</th>
+<th>rescale</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>global</td>
+<td>omicron</td>
+<td>True</td>
+<td>omicron_variant</td>
+<td></td>
+<td></td>
+<td></td>
+<td>[5,90]</td>
+<td>100</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">#</a></h2>
+<p>You can specify parameters for each simulation separately or define them globally for each region in multisimulation, or combine them. Most parameters are based on the original Covasim model, but also contains some custom parameters. For all parameters see <a href="../../Parameters/#parameters-for-simulation">Simulation parameters</a>. Below is the description how to define parameters globally for all multisimulation or separately for each simulation.</p>
+<h3 id="global-parameters">Global parameters<a class="headerlink" href="#global-parameters" title="Permanent link">#</a></h3>
+<p>Parameters can be defined globally. That means you can choose parameters and assign them value to take effect in every region of of the multisimulation. This approach can allow the parameters to be defined conveniently only in one place in <a href="../../Simulation_settings/#global-simulation-parameteres">Simulation_settings global parameters</a>. Please see the detailed description there. For global parameters turn the <em>key: different_pars value</em> to <code>false</code>.</p>
+<h4 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">#</a></h4>
+<p>For defining parameters you have to write them into the <em>simulation_global_pars.csv</em> file which is described <a href="../../Simulation_settings/#global-parameters">here</a>. Global parameters takes effect in all regions of the simulation. So it is necessary to share the same <code>start_day</code>, number of days to simulate and also you can use other parameters, which are described in <a href="../../Parameters/#allowed-parameters-for-global-settings">Parameters</a>. Also you can specify various other parameters, which are available for the <strong>Parameters for Simulation</strong> in <a href="../../Parameters/#parameters-for-simulation">Parameters</a>, but be carefull with the parameters which are location specific.</p>
+<p><strong>Definition of parameters in the configuration file</strong></p>
+<pre><code class="language-json">...
+&quot;global_parameters&quot;:
+{
+    &quot;filepath&quot;:&quot;/&lt;Path_to_sandbox&gt;/input_data/data/simulation/simulation_global_pars.csv&quot;
+}
+...
+</code></pre>
+<p><strong>Definition of global parameters in a <code>.csv</code> file saved in the file path in <em>global_parameters</em></strong></p>
+<table>
+<thead>
+<tr>
+<th>n_days</th>
+<th>start_day</th>
+<th>use_waning</th>
+<th>unique_mobility_indexes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>90</td>
+<td>2020-01-1</td>
+<td>true</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+<h3 id="region-specific-parameters">Region-specific parameters<a class="headerlink" href="#region-specific-parameters" title="Permanent link">#</a></h3>
+<p>You can define region-specific parameters along with global parameters. In this case, parameters can be specified differently for each region <em>key:pars</em> section. Also region specific input file has few necessary keys to describe simulation.</p>
+<p><strong>How to define input <code>csv</code>/<code>xlsx</code> file in the simulation configuration</strong></p>
+<pre><code class="language-json">{
+    &quot;region_parameters&quot;:
+    {
+        &quot;filepath&quot;:&quot;/&lt;Path_to_sandbox&gt;/input_data/data/simulation/simulation_region_pars.csv&quot;
+    },
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>location_code</th>
+<th>use</th>
+<th>region_parent_name</th>
+<th>name</th>
+<th>popfile</th>
+<th>pop_infected</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CZ01</td>
+<td>true</td>
+<td>Czechia</td>
+<td>Region1</td>
+<td></td>
+<td>2</td>
+</tr>
+<tr>
+<td>CZ02</td>
+<td>true</td>
+<td>Czechia</td>
+<td>Region2</td>
+<td></td>
+<td>0</td>
+</tr>
+<tr>
+<td>CZ03</td>
+<td>true</td>
+<td>Czechia</td>
+<td>Region3</td>
+<td></td>
+<td>0</td>
+</tr>
+<tr>
+<td>CZ04</td>
+<td>true</td>
+<td>Czechia</td>
+<td>Region4</td>
+<td></td>
+<td>0</td>
+</tr>
+<tr>
+<td>CZ05</td>
+<td>true</td>
+<td>Czechia</td>
+<td>Region5</td>
+<td></td>
+<td>2</td>
+</tr>
+<tr>
+<td>CZ06</td>
+<td>true</td>
+<td>Czechia</td>
+<td>Region6</td>
+<td></td>
+<td>2</td>
+</tr>
+<tr>
+<td>CZ07</td>
+<td>true</td>
+<td>Czechia</td>
+<td>Region7</td>
+<td></td>
+<td>0</td>
+</tr>
+<tr>
+<td>CZ08</td>
+<td>true</td>
+<td>Czechia</td>
+<td>Region8</td>
+<td></td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>As you can see, this regions has only <code>pop_infected</code> parameter as the additional parameter, which will be also combined with global parameters defined in the global parameters file.
+Note: This approach is the most effective because most often there will be only a few region-specific parameters.</p>
+<p><strong>Note: If some parameters are outside their valid range, a warning is issued. Always check the <a href="../../Parameters/">parameters section</a></strong></p>
+<h2 id="how-to-run-a-simulation">How to run a simulation<a class="headerlink" href="#how-to-run-a-simulation" title="Permanent link">#</a></h2>
+<p>As explained in <a href="../exampleE3/">T3 Running a simulation</a>, you can run an abmSHARE simulation with all combinations described in T3. 
+It is also recommended to enable <em>key:parallel_run</em> to take advantages of parallel population object loading.</p>
+<h3 id="complex-run-with-a-synthetic-population">Complex run with a synthetic population<a class="headerlink" href="#complex-run-with-a-synthetic-population" title="Permanent link">#</a></h3>
+<p>A <a href="../exampleE3/#full-run">full run</a> simulation of all modules automatically loads newly created synthetic population object in multisimulation. </p>
+<h3 id="complex-run-without-synthetic-population-run">Complex run without synthetic population run<a class="headerlink" href="#complex-run-without-synthetic-population-run" title="Permanent link">#</a></h3>
+<p>To use the already created synthetic population objects, turn off synthetic population module as in <a href="../exampleE3/#recommended-combination">Recommended combination</a>. In this case, a path to the population objects for each region must be specified in <em>key:popfile</em>.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../exampleE4_1/" class="btn btn-neutral float-left" title="T4.1 Population input data"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../exampleE5A_1/" class="btn btn-neutral float-right" title="T5.1 Simulation - Interventions">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../exampleE4_1/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../exampleE5A_1/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../javascripts/mathjax.js" defer></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6" defer></script>
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
