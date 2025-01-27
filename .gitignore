@@ -169,3 +169,7 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# MKDocs Site data and pdfs
+pdf/*
+docs/downloads/synthpops_aditional_input_data
